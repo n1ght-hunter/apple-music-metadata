@@ -1,0 +1,25 @@
+{
+  "name": "apple-music-metadata",
+  "version": "1.0.0",
+  "description": "gets apple music metatda for songs and playlists links",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "ts-node ./src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "keywords": [
+    "music",
+    "apple music",
+    "apple music metdadata"
+  ],
+  "author": "night_hunter",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.23.0",
+    "axios-retry": "^3.2.0",
+    "domhandler": "^4.2.2",
+    "htmlparser2": "^7.1.2",
+    "ts-node": "^10.3.0"
+  }
+}
