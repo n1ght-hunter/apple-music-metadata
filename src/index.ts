@@ -9,10 +9,10 @@ axiosRetry(axios, {retries: 5});
 //scraps apple webapge to get metatdata
 // for each song in a playlist has to run song() to get author
 interface RawApplePlaylist {
-    name: string
+    name?: string
     type: 'playlist'|'song'
     author: string
-    tracks: { artist: string, title: string }[]
+    tracks?: { artist: string, title: string }[]
 }
 
 /**
@@ -20,7 +20,7 @@ interface RawApplePlaylist {
  * @param {boolean} forceAll
  * @returns {Promise<?RawApplePlaylist>}
  */
-async function findJSONLD( document: Document , forceAll: boolean = false){
+async function findJSONLD( document: Document): Promise<RawApplePlaylist|undefined> {
     const scripts = DomUtils.findAll(element => {
         if (element.type !== 'script')
             return false;
@@ -32,10 +32,10 @@ async function findJSONLD( document: Document , forceAll: boolean = false){
         let data = JSON.parse(DomUtils.textContent(script));
         if ('@graph' in data)
             data = data['@graph'];
-        if (data['@type'] === 'MusicAlbum' && !forceAll)
-            return data.byArtist.name;
         if(data['@type'] === 'MusicAlbum') {
-                return data.songData.name as string
+            return { author: data.byArtist.name as string,
+                     type: "song"
+            }
         } 
         if (data['@type'] === 'MusicPlaylist') {
             let { name, author, track } = data;
@@ -73,6 +73,6 @@ export async function getSong(url: string): Promise<{ artist: string, title: str
 export async function getPlaylist(url: string): Promise<RawApplePlaylist|undefined> {
     const result = await axios.get<string>(url);
     const document = parseDocument(result.data);
-    return await findJSONLD(document, true);
+    return await findJSONLD( document );
 }
 
