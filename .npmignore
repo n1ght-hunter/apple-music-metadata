@@ -1,0 +1,12 @@
+src/
+tslint.json
+tsconfig.json
+.idea/
+.eslintrc.yaml
+.github
+.eslintrc
+.eslintignore
+*.tgz
+docs
+jsdoc.json
+dmp-ts.iml

@@ -87,4 +87,3 @@ export async function getPlaylist(url: string): Promise<RawApplePlaylist|undefin
     return await findJSONLD(document, true);
 }
 
-getPlaylist("https://music.apple.com/nz/playlist/acoustic-chill/pl.b5e8dbe8a706496496e1292466839207").then(console.log);
