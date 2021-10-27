@@ -20,7 +20,7 @@ interface RawApplePlaylist {
  * @param {boolean} forceAll
  * @returns {Promise<?RawApplePlaylist>}
  */
-async function findJSONLD( document: Document , forceAll: boolean = false): Promise<RawApplePlaylist|undefined> {
+async function findJSONLD( document: Document , forceAll: boolean = false){
     const scripts = DomUtils.findAll(element => {
         if (element.type !== 'script')
             return false;
@@ -35,18 +35,7 @@ async function findJSONLD( document: Document , forceAll: boolean = false): Prom
         if (data['@type'] === 'MusicAlbum' && !forceAll)
             return data.byArtist.name;
         if(data['@type'] === 'MusicAlbum') {
-            let { name, byArtist, tracks } = data;
-            return {
-                type: 'song',
-                name: name as string,
-                author: byArtist.name as string,
-                tracks: tracks.map((songData: any) => {
-                    return {
-                        artist: byArtist.name as string,
-                        title: songData.name as string
-                    }
-                })
-            };
+                return data.songData.name as string
         } 
         if (data['@type'] === 'MusicPlaylist') {
             let { name, author, track } = data;
