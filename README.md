@@ -1,6 +1,6 @@
 <h1 align="center">apple-music-metadata</h1>
 
-# A simple typscipt package for scraping metadat for apple music playlist and songs
+## A simple typscipt package for scraping metadat for apple music playlist and songs
 
 # Installation
 
@@ -22,7 +22,7 @@ returns {Promise<{ artist: string, title: string }>}
 import getSong from "apple-music-metadata";
 const playlistLink = "https://music.apple.com/us/playlist/example/06496496e1292466839207";
 const playlist = await getPlaylist(playlistLink); 
-returns Promist{playlist{
+returns Promise{playlist{
     name: string
     type: 'playlist'|'song'
     author: string
