@@ -11,14 +11,14 @@ npm install apple-music-metadata
 #  Usage
 
 ## Song data
-```
+```ts
 import getSong from "apple-music-metadata";
 const songLink = "https://music.apple.com/us/album/example/1541902791?i=1541903021";
 const song = await getSong(songLink); 
 returns {Promise<{ artist: string, title: string }>}
 ```
 ## Playlist data 
-```
+```ts
 import getSong from "apple-music-metadata";
 const playlistLink = "https://music.apple.com/us/playlist/example/06496496e1292466839207";
 const playlist = await getPlaylist(playlistLink); 
