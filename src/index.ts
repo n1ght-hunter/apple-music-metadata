@@ -10,7 +10,7 @@ axiosRetry(axios, {retries: 5});
 // for each song in a playlist has to run song() to get author
 interface RawApplePlaylist {
     name: string
-    type: 'playlist'|'album'
+    type: 'playlist'|'song'
     author: string
     tracks: { artist: string, title: string }[]
 }
@@ -37,7 +37,7 @@ async function findJSONLD( document: Document , forceAll: boolean = false): Prom
         if(data['@type'] === 'MusicAlbum') {
             let { name, byArtist, tracks } = data;
             return {
-                type: 'playlist',
+                type: 'song',
                 name: name as string,
                 author: byArtist.name as string,
                 tracks: tracks.map((songData: any) => {
