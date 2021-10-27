@@ -19,7 +19,9 @@
     "axios": "^0.23.0",
     "axios-retry": "^3.2.0",
     "domhandler": "^4.2.2",
-    "htmlparser2": "^7.1.2",
-    "ts-node": "^10.3.0"
+    "htmlparser2": "^7.1.2"
+  },
+  "devDependencies": {
+    "ts-node": "^10.4.0"
   }
 }
