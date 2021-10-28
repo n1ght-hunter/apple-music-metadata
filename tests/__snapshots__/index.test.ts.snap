@@ -1,0 +1,448 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`album 1`] = `
+Object {
+  "author": "Sody",
+  "name": "real growth takes time - EP",
+  "tracks": Array [
+    Object {
+      "artist": "Sody",
+      "title": "butterfly",
+    },
+    Object {
+      "artist": "Sody",
+      "title": "hold it all together",
+    },
+    Object {
+      "artist": "Sody",
+      "title": "i'll be there",
+    },
+    Object {
+      "artist": "Sody",
+      "title": "scary part of me",
+    },
+    Object {
+      "artist": "Sody",
+      "title": "time again",
+    },
+    Object {
+      "artist": "Sody",
+      "title": "i've got you",
+    },
+  ],
+  "type": "album",
+}
+`;
+
+exports[`playlist 1`] = `
+Object {
+  "author": "Apple Music Hip-Hop",
+  "name": "Hip-Hop/R&amp;B Throwback",
+  "tracks": Array [
+    Object {
+      "artist": "JAY-Z",
+      "title": "03-bonnie-clyde-feat-beyonc%C3%A9-knowles",
+    },
+    Object {
+      "artist": "Fat Joe",
+      "title": "whats-luv-feat-ashanti",
+    },
+    Object {
+      "artist": "Ja Rule",
+      "title": "always-on-time-feat-ashanti",
+    },
+    Object {
+      "artist": "TLC",
+      "title": "no-scrubs",
+    },
+    Object {
+      "artist": "50 Cent",
+      "title": "21-questions-feat-nate-dogg-feat-nate-dogg",
+    },
+    Object {
+      "artist": "Craig David",
+      "title": "7-days",
+    },
+    Object {
+      "artist": "Ne-Yo",
+      "title": "so-sick",
+    },
+    Object {
+      "artist": "2Pac",
+      "title": "changes-feat-talent",
+    },
+    Object {
+      "artist": "Nelly",
+      "title": "dilemma-feat-kelly-rowland",
+    },
+    Object {
+      "artist": "Cassie",
+      "title": "me-u",
+    },
+    Object {
+      "artist": "50 Cent",
+      "title": "in-da-club",
+    },
+    Object {
+      "artist": "Destiny's Child",
+      "title": "say-my-name-1s-edit",
+    },
+    Object {
+      "artist": "The Game",
+      "title": "hate-it-or-love-it-feat-50-cent",
+    },
+    Object {
+      "artist": "Ashanti",
+      "title": "unfoolish",
+    },
+    Object {
+      "artist": "Usher",
+      "title": "u-remind-me",
+    },
+    Object {
+      "artist": "JAY-Z &amp; LINKIN PARK",
+      "title": "numb-encore",
+    },
+    Object {
+      "artist": "Timbaland",
+      "title": "the-way-i-are-feat-keri-hilson-d-o-e",
+    },
+    Object {
+      "artist": "Mario",
+      "title": "let-me-love-you",
+    },
+    Object {
+      "artist": "Nelly",
+      "title": "ride-wit-me-feat-city-spud",
+    },
+    Object {
+      "artist": "Kevin Lyttle",
+      "title": "turn-me-on",
+    },
+    Object {
+      "artist": "The Game",
+      "title": "how-we-do-feat-50-cent",
+    },
+    Object {
+      "artist": "Ne-Yo",
+      "title": "miss-independent",
+    },
+    Object {
+      "artist": "Blackstreet",
+      "title": "no-diggity-feat-dr-dre-queen-pen",
+    },
+    Object {
+      "artist": "Kanye West",
+      "title": "all-falls-down-feat-syleena-johnson",
+    },
+    Object {
+      "artist": "50 Cent",
+      "title": "candy-shop-feat-olivia",
+    },
+    Object {
+      "artist": "Luniz",
+      "title": "i-got-5-on-it-feat-michael-marshall",
+    },
+    Object {
+      "artist": "Eve",
+      "title": "got-what-you-need-feat-drag-on",
+    },
+    Object {
+      "artist": "Fugees",
+      "title": "ready-or-not",
+    },
+    Object {
+      "artist": "Outkast",
+      "title": "ms-jackson",
+    },
+    Object {
+      "artist": "Beyoncé",
+      "title": "irreplaceable",
+    },
+    Object {
+      "artist": "Usher",
+      "title": "yeah-feat-lil-jon-ludacris",
+    },
+    Object {
+      "artist": "Will Smith",
+      "title": "miami",
+    },
+    Object {
+      "artist": "The Notorious B.I.G.",
+      "title": "hypnotize-2014-remastered-version",
+    },
+    Object {
+      "artist": "Justin Timberlake",
+      "title": "cry-me-a-river",
+    },
+    Object {
+      "artist": "The Notorious B.I.G.",
+      "title": "mo-money-mo-problems-feat-mase-puff-daddy-2014-remastered",
+    },
+    Object {
+      "artist": "Ciara",
+      "title": "one-two-step-feat-missy-elliott",
+    },
+    Object {
+      "artist": "Sean Paul",
+      "title": "temperature",
+    },
+    Object {
+      "artist": "Mary J. Blige",
+      "title": "family-affair",
+    },
+    Object {
+      "artist": "Mary Mary",
+      "title": "shackles-praise-you",
+    },
+    Object {
+      "artist": "Various Artists",
+      "title": "i-dont-wanna-know-feat-enya-p-diddy-2016-remastered",
+    },
+    Object {
+      "artist": "Alicia Keys",
+      "title": "if-i-aint-got-you",
+    },
+    Object {
+      "artist": "Mark Morrison",
+      "title": "return-of-the-mack",
+    },
+    Object {
+      "artist": "Coolio",
+      "title": "gangstas-paradise-feat-l-v",
+    },
+    Object {
+      "artist": "Keri Hilson",
+      "title": "knock-you-down-feat-kanye-west-ne-yo",
+    },
+    Object {
+      "artist": "Wayne Wonder",
+      "title": "no-letting-go",
+    },
+    Object {
+      "artist": "Fergie",
+      "title": "glamorous-feat-ludacris",
+    },
+    Object {
+      "artist": "Ja Rule",
+      "title": "livin-it-up-feat-case",
+    },
+    Object {
+      "artist": "Scribe",
+      "title": "not-many",
+    },
+    Object {
+      "artist": "Sean Kingston",
+      "title": "beautiful-girls",
+    },
+    Object {
+      "artist": "Rihanna",
+      "title": "pon-de-replay",
+    },
+    Object {
+      "artist": "Young Money",
+      "title": "bedrock-feat-lloyd",
+    },
+    Object {
+      "artist": "Akon",
+      "title": "locked-up",
+    },
+    Object {
+      "artist": "Mariah Carey",
+      "title": "its-like-that-feat-jermaine-dupri-fatman-scoop",
+    },
+    Object {
+      "artist": "Dr. Dre",
+      "title": "forgot-about-dre-feat-eminem",
+    },
+    Object {
+      "artist": "Shakira",
+      "title": "hips-dont-lie-feat-wyclef-jean",
+    },
+    Object {
+      "artist": "Various Artists",
+      "title": "ill-be-missing-you",
+    },
+    Object {
+      "artist": "Estelle",
+      "title": "american-boy-feat-kanye-west",
+    },
+    Object {
+      "artist": "Santana",
+      "title": "maria-maria-radio-mix-feat-the-product-g-b",
+    },
+    Object {
+      "artist": "Lumidee",
+      "title": "never-leave-you-uh-ooh-uh-oooh",
+    },
+    Object {
+      "artist": "Ashanti",
+      "title": "rock-wit-u-awww-baby",
+    },
+    Object {
+      "artist": "Usher",
+      "title": "you-make-me-wanna",
+    },
+    Object {
+      "artist": "Hilltop Hoods",
+      "title": "the-nosebleed-section",
+    },
+    Object {
+      "artist": "Jennifer Lopez",
+      "title": "get-right",
+    },
+    Object {
+      "artist": "Sean Paul",
+      "title": "get-busy",
+    },
+    Object {
+      "artist": "Flo Rida",
+      "title": "low-feat-t-pain",
+    },
+    Object {
+      "artist": "Eve",
+      "title": "whos-that-girl",
+    },
+    Object {
+      "artist": "Eminem",
+      "title": "without-me",
+    },
+    Object {
+      "artist": "Pras",
+      "title": "ghetto-supastar-that-is-what-you-are",
+    },
+    Object {
+      "artist": "Savage",
+      "title": "swing",
+    },
+    Object {
+      "artist": "Drake",
+      "title": "best-i-ever-had",
+    },
+    Object {
+      "artist": "Snoop Dogg",
+      "title": "beautiful-feat-pharrell-uncle-charlie-wilson",
+    },
+    Object {
+      "artist": "Destiny's Child",
+      "title": "jumpin-jumpin",
+    },
+    Object {
+      "artist": "Fabolous",
+      "title": "into-you-feat-tamia-main-mix",
+    },
+    Object {
+      "artist": "Whitney Houston",
+      "title": "its-not-right-but-its-okay",
+    },
+    Object {
+      "artist": "T.I.",
+      "title": "live-your-life-feat-rihanna",
+    },
+    Object {
+      "artist": "Busta Rhymes",
+      "title": "i-know-what-you-want-feat-flipmode-squad",
+    },
+    Object {
+      "artist": "Christina Aguilera",
+      "title": "cant-hold-us-down-feat-lil-kim",
+    },
+    Object {
+      "artist": "*NSYNC",
+      "title": "girlfriend-feat-nelly-the-neptunes-remix",
+    },
+    Object {
+      "artist": "Lil Wayne",
+      "title": "lollipop-feat-static-major",
+    },
+    Object {
+      "artist": "Missy Elliott",
+      "title": "work-it",
+    },
+    Object {
+      "artist": "Lupe Fiasco",
+      "title": "superstar-feat-matthew-santos",
+    },
+    Object {
+      "artist": "Various Artists",
+      "title": "hey-ma-feat-juelz-santana-freekey-zekey-toya",
+    },
+    Object {
+      "artist": "Snoop Dogg",
+      "title": "drop-it-like-its-hot-feat-pharrell-williams",
+    },
+    Object {
+      "artist": "Various Artists",
+      "title": "bad-boy-for-life-feat-black-rob-mark-curry-2016-remastered",
+    },
+    Object {
+      "artist": "Nina Sky",
+      "title": "move-ya-body",
+    },
+    Object {
+      "artist": "Eamon",
+      "title": "fuck-it-i-dont-want-you-back",
+    },
+    Object {
+      "artist": "Jennifer Lopez",
+      "title": "aint-it-funny-feat-ja-rule-cadillac-tah-murder-remix",
+    },
+    Object {
+      "artist": "Jordin Sparks",
+      "title": "no-air",
+    },
+    Object {
+      "artist": "Various Artists",
+      "title": "pony",
+    },
+    Object {
+      "artist": "Beyoncé",
+      "title": "best-thing-i-never-had",
+    },
+    Object {
+      "artist": "Twista",
+      "title": "slow-jamz-feat-kanye-west-jamie-foxx",
+    },
+    Object {
+      "artist": "Various Artists",
+      "title": "thong-song",
+    },
+    Object {
+      "artist": "Shontelle",
+      "title": "t-shirt",
+    },
+    Object {
+      "artist": "Terror Squad",
+      "title": "lean-back-feat-fat-joe-remy-ma",
+    },
+    Object {
+      "artist": "Lil Jon &amp; The East Side Boyz",
+      "title": "get-low",
+    },
+    Object {
+      "artist": "J-Kwon",
+      "title": "tipsy-club-mix",
+    },
+    Object {
+      "artist": "Ol' Dirty Bastard",
+      "title": "got-your-money-feat-kelis",
+    },
+    Object {
+      "artist": "Toni Braxton",
+      "title": "he-wasnt-man-enough",
+    },
+    Object {
+      "artist": "Khia",
+      "title": "my-neck-my-back-lick-it",
+    },
+  ],
+  "type": "playlist",
+}
+`;
+
+exports[`song 1`] = `
+Object {
+  "artist": "Sody",
+  "title": "butterfly",
+}
+`;

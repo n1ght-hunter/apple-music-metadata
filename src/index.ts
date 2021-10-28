@@ -67,9 +67,8 @@ async function findJSONLD( document: Document, album: boolean = false): Promise<
 export async function getSong(url: string): Promise<{ artist: string, title: string }> {
     const result = await axios.get<string>(url);
     const document = parseDocument(result.data);
-    let song: any = [];
-    // song.artist = await findJSONLD(document);
-    await console.log(findJSONLD(document))
+    let song: any = {};
+    song.artist = await findJSONLD(document);
     const regexName = new RegExp(/https?:\/\/music\.apple\.com\/.+?\/.+?\/(.+?)\//g);
     const title: any = regexName.exec(url);
     song.title = title[1];
@@ -85,5 +84,3 @@ export async function getPlaylist(url: string): Promise<RawApplePlaylist|undefin
     const document = parseDocument(result.data);
     return await findJSONLD( document, true );
 }
-
-
