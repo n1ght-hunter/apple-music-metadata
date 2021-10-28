@@ -10,9 +10,14 @@
       "strictPropertyInitialization": false,
       "esModuleInterop": true,
       "pretty": true,
+      "skipLibCheck": true,
       "resolveJsonModule": true
     },
     "include": [
       "src/**/*"
-    ]
+    ],
+    "exclude": [
+        "test.ts",
+        "**/*.spec.ts"
+      ]
   }

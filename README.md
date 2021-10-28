@@ -1,6 +1,6 @@
 <h1 align="center">apple-music-metadata</h1>
 
-## A simple typscipt package for scraping metadata for apple music playlist and songs
+## A simple typscipt package for scraping metadata for apple music playlists and songs
 
 # Installation
 
