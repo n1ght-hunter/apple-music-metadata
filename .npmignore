@@ -1,5 +1,5 @@
 src/
-test/
+tests/
 tslint.json
 tsconfig.json
 .idea/
@@ -11,3 +11,4 @@ tsconfig.json
 docs
 jsdoc.json
 dmp-ts.iml
+test-driectory/
