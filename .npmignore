@@ -1,4 +1,5 @@
 src/
+test/
 tslint.json
 tsconfig.json
 .idea/
