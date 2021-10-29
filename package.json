@@ -13,7 +13,11 @@
       ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     },
     "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
-    "moduleFileExtensions": ["ts", "tsx", "js"]
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ]
   },
   "keywords": [
     "music",
@@ -28,6 +32,7 @@
     "htmlparser2": "^7.1.2"
   },
   "devDependencies": {
+    "@types/htmlparser2": "^3.10.3",
     "@types/jest": "^27.0.2",
     "@types/node": "^16.11.6",
     "jest": "^27.3.1",

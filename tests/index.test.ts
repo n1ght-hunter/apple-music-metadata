@@ -9,4 +9,4 @@ test("album", async () => {
 }, 15000);
 test("playlist", async () => {
     await expect(getPlaylist("https://music.apple.com/nz/playlist/hip-hop-r-b-throwback/pl.674abcd261d04582b58d6388394cd047")).resolves.toMatchSnapshot();
-}, 30000);
+}, 35000);

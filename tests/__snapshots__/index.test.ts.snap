@@ -124,6 +124,10 @@ Object {
       "title": "how-we-do-feat-50-cent",
     },
     Object {
+      "artist": "Nelly Furtado",
+      "title": "promiscuous-feat-timbaland",
+    },
+    Object {
       "artist": "Ne-Yo",
       "title": "miss-independent",
     },
@@ -444,5 +448,6 @@ exports[`song 1`] = `
 Object {
   "artist": "Sody",
   "title": "butterfly",
+  "type": "song",
 }
 `;

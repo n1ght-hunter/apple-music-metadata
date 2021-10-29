@@ -8,17 +8,22 @@ axiosRetry(axios, {retries: 5});
 
 interface RawApplePlaylist {
     name: string
-    type: 'playlist'|'album'|'song'
+    type: 'playlist'|'album'
     author: string
     tracks: { artist: string, title: string }[]
-}
+};
+interface RawAppleSong {
+    type?: 'song'
+    artist: string, 
+    title: string
+};
 
 /**
  * @param {Document} document
  * @param {boolean} album
  * @returns {Promise<?RawApplePlaylist>}
  */
-async function findJSONLD( document: Document, album: boolean = false): Promise<RawApplePlaylist|undefined> {
+async function findJSONLD( document: Document, album: boolean = false): Promise<RawApplePlaylist|string|undefined> {
     const scripts = DomUtils.findAll(element => {
         if (element.type !== 'script')
             return false;
@@ -31,7 +36,7 @@ async function findJSONLD( document: Document, album: boolean = false): Promise<
         if ('@graph' in data)
             data = data['@graph'];
         if (data['@type'] === 'MusicAlbum' && !album)
-            return data.byArtist.name;
+            return data.byArtist.name as string;
         if(data['@type'] === 'MusicAlbum' && album) {
             let { name, byArtist, tracks } = data;
             return {
@@ -53,27 +58,36 @@ async function findJSONLD( document: Document, album: boolean = false): Promise<
                 name: name as string,
                 author: author.name as string,
                 tracks: await Promise.all(
-                    track.map(async (songData: any) => await getSong(songData.url))
+                    track.map(async (songData: any) => await getSong(songData.url, true))
                 ).catch(() => []) as any[]
             };
         }
     }
-}
+};
 
 /**
  * @param {string} url
- * @returns {Promise<{ artist: string, title: string }>}
+ * @returns {Promise<RawAppleSong>}
  */
-export async function getSong(url: string): Promise<{ artist: string, title: string }> {
+export async function getSong(url: string, playlist: boolean = false): Promise<RawAppleSong| undefined> {
     const result = await axios.get<string>(url);
     const document = parseDocument(result.data);
-    let song: any = {};
-    song.artist = await findJSONLD(document);
-    const regexName = new RegExp(/https?:\/\/music\.apple\.com\/.+?\/.+?\/(.+?)\//g);
-    const title: any = regexName.exec(url);
-    song.title = title[1];
+
+    const artist = await findJSONLD(document) as string;
+    const regexName = RegExp(/https?:\/\/music\.apple\.com\/.+?\/.+?\/(.+?)\//);
+    const title = regexName.exec(url)?.[1] as string;
+
+    const song: RawAppleSong = {
+        artist,
+        title,
+    }
+
+    if (playlist === false){
+        song.type = "song"
+    }
+
     return song;
-}
+};
 
 /**
  * @param {string} url
@@ -82,5 +96,19 @@ export async function getSong(url: string): Promise<{ artist: string, title: str
 export async function getPlaylist(url: string): Promise<RawApplePlaylist|undefined> {
     const result = await axios.get<string>(url);
     const document = parseDocument(result.data);
-    return await findJSONLD( document, true );
-}
+    return await findJSONLD( document, true ) as RawApplePlaylist;
+};
+
+
+/**
+ * @param {string} url
+ * @returns {Promise<Promise<RawApplePlaylist|RawAppleSong|undefined>>}
+ */
+export async function autoGetApple(url: string): Promise<RawApplePlaylist|RawAppleSong|undefined> {
+    if (RegExp(/https?:\/\/music\.apple\.com\/.+?\/playlist\//).test(url) || RegExp(/https?:\/\/music\.apple\.com\/.+?\/album\/.+?\/.+?\?i=/).test(url)){
+        return await getPlaylist(url)
+    };
+    if (!url.includes("?i=")){
+        return await getSong(url)
+    };
+};
