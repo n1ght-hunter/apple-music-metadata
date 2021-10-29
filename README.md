@@ -37,7 +37,8 @@ returns Promise{RawApplePlaylist{
 ## Auto 
 ```ts
 import autoGetApple from "apple-music-metadata";
-const link = "exapmle" // song ablum or playlist link
+const link = "example" // song ablum or playlist link
+const appleData = await autoGetApple(link)
 returns RawAppleSong|RawApplePlaylist
 ```
 
