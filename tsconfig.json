@@ -4,7 +4,7 @@
       "module": "commonjs",
       "allowJs": true,
       "declaration": true,
-      "rootDir": ".",
+      "rootDir": "src",
       "outDir": "dist",
       "strict": true,
       "strictPropertyInitialization": false,
