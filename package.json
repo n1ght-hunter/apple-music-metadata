@@ -1,6 +1,6 @@
 {
   "name": "apple-music-metadata",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "gets apple music metadata for songs and playlists links",
   "main": "dist/index.js",
   "scripts": {
@@ -24,7 +24,6 @@
     "apple music",
     "apple music metadata"
   ],
-  
   "author": "night_hunter",
   "license": "MIT",
   "repository": {
