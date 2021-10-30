@@ -52,13 +52,13 @@ async function findJSONLD( document: Document, album: boolean = false): Promise<
             };
         } 
         if (data['@type'] === 'MusicPlaylist') {
-            let { name, author, tracks } = data;
+            let { name, author, track } = data;
             return {
                 type: 'playlist',
                 name: name as string,
                 author: author.name as string,
                 tracks: await Promise.all(
-                    tracks.map(async (songData: any) => await getSong(songData.url, true))
+                    track.map(async (songData: any) => await getSong(songData.url, true))
                 ).catch(() => []) as any[]
             };
         }   
@@ -112,4 +112,3 @@ export async function autoGetApple(url: string): Promise<RawApplePlaylist|RawApp
         return await getSong(url)
     };
 };
-
