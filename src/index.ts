@@ -6,13 +6,13 @@ import axiosRetry from "axios-retry";
 // apple will somtimes reject request due to overload this will retry each request up to 5 times
 axiosRetry(axios, {retries: 5});
 
-interface RawApplePlaylist {
+export interface RawApplePlaylist {
     name: string
     type: 'playlist'|'album'
     author: string
     tracks: { artist: string, title: string }[]
 };
-interface RawAppleSong {
+export interface RawAppleSong {
     type?: 'song'
     artist: string, 
     title: string
@@ -52,16 +52,16 @@ async function findJSONLD( document: Document, album: boolean = false): Promise<
             };
         } 
         if (data['@type'] === 'MusicPlaylist') {
-            let { name, author, track } = data;
+            let { name, author, tracks } = data;
             return {
                 type: 'playlist',
                 name: name as string,
                 author: author.name as string,
                 tracks: await Promise.all(
-                    track.map(async (songData: any) => await getSong(songData.url, true))
+                    tracks.map(async (songData: any) => await getSong(songData.url, true))
                 ).catch(() => []) as any[]
             };
-        }
+        }   
     }
 };
 
