@@ -105,10 +105,11 @@ export async function getPlaylist(url: string): Promise<RawApplePlaylist|undefin
  * @returns {Promise<Promise<RawApplePlaylist|RawAppleSong|undefined>>}
  */
 export async function autoGetApple(url: string): Promise<RawApplePlaylist|RawAppleSong|undefined> {
-    if (RegExp(/https?:\/\/music\.apple\.com\/.+?\/playlist\//).test(url) || RegExp(/https?:\/\/music\.apple\.com\/.+?\/album\/.+?\/.+?\?i=/).test(url)){
+    if (RegExp(/https?:\/\/music\.apple\.com\/.+?\/playlist\//).test(url) || (!url.includes("?i="))){
         return await getPlaylist(url)
     };
-    if (!url.includes("?i=")){
+    if (RegExp(/https?:\/\/music\.apple\.com\/.+?\/album\/.+?\/.+?\?i=/).test(url)){
         return await getSong(url)
     };
 };
+
