@@ -1,6 +1,6 @@
 {
   "name": "apple-music-metadata",
-  "version": "1.0.7",
+  "version": "1.0.9",
   "description": "gets apple music metadata for songs and playlists links",
   "main": "dist/index.js",
   "scripts": {
