@@ -1,6 +1,6 @@
 <h1 align="center">apple-music-metadata</h1>
 
-## A simple typscipt package for scraping metadata for apple music playlists and songs
+## A simple Typescript package for scraping metadata for Apple Music Songs / Playlists / Albums
 
 # Installation
 
@@ -24,7 +24,7 @@ returns Promise{RawAppleSong {
 ```
 ## Playlist data 
 ```ts
-import getSong from "apple-music-metadata";
+import getPlaylist from "apple-music-metadata";
 const playlistLink = "https://music.apple.com/us/playlist/example/06496496e1292466839207";
 const playlist = await getPlaylist(playlistLink); 
 returns Promise{RawApplePlaylist {
@@ -34,7 +34,6 @@ returns Promise{RawApplePlaylist {
     tracks: { artist: string; title: string; album: string };
 }}
 ```
-
 ## Auto 
 ```ts
 import autoGetApple from "apple-music-metadata";
@@ -43,4 +42,4 @@ const appleData = await autoGetApple(link)
 returns RawAppleSong|RawApplePlaylist
 ```
 
-use the type key to sort return
+Use the `<RawApplePlaylist|RawAppleSong>.type` to sort the results for Auto mode.
