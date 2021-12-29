@@ -74,64 +74,79 @@ Object {
   "name": "Soda Stereo Essentials",
   "tracks": Array [
     Object {
+      "album": "Canción Animal",
       "artist": "Soda Stereo",
-      "title": "de-m%C3%BAsica-ligera",
+      "title": "De Música Ligera",
     },
     Object {
+      "album": "Signos",
       "artist": "Soda Stereo",
-      "title": "persiana-am%C3%A9ricana",
+      "title": "Persiana Américana",
     },
     Object {
+      "album": "Sueño Stereo",
       "artist": "Soda Stereo",
-      "title": "ella-us%C3%B3-mi-cabeza-como-un-rev%C3%B3lver",
+      "title": "Ella Usó Mi Cabeza Como un Revólver",
     },
     Object {
+      "album": "Nada Personal",
       "artist": "Soda Stereo",
-      "title": "cuando-pase-el-temblor",
+      "title": "Cuando Pase el Temblor",
     },
     Object {
+      "album": "Dynamo",
       "artist": "Soda Stereo",
-      "title": "primavera-0",
+      "title": "Primavera 0",
     },
     Object {
+      "album": "MTV Unplugged: Comfort y Música para Volar",
       "artist": "Soda Stereo",
-      "title": "en-la-ciudad-de-la-furia",
+      "title": "En la Ciudad de la Furia",
     },
     Object {
+      "album": "Canción Animal",
       "artist": "Soda Stereo",
-      "title": "t%C3%A9-para-tres",
+      "title": "Té para Tres",
     },
     Object {
+      "album": "Soda Stereo",
       "artist": "Soda Stereo",
-      "title": "tr%C3%A1tame-suavemente",
+      "title": "Trátame Suavemente",
     },
     Object {
+      "album": "Canción Animal",
       "artist": "Soda Stereo",
-      "title": "canci%C3%B3n-animal",
+      "title": "Canción Animal",
     },
     Object {
+      "album": "Signos",
       "artist": "Soda Stereo",
-      "title": "signos",
+      "title": "Signos",
     },
     Object {
+      "album": "Soda Stereo",
       "artist": "Soda Stereo",
-      "title": "un-misil-en-mi-placard",
+      "title": "Un Misil en Mi Placard",
     },
     Object {
+      "album": "Nada Personal",
       "artist": "Soda Stereo",
-      "title": "juegos-de-seducci%C3%B3n",
+      "title": "Juegos de Seducción",
     },
     Object {
+      "album": "Sueño Stereo",
       "artist": "Soda Stereo",
-      "title": "zoom",
+      "title": "Zoom",
     },
     Object {
+      "album": "Nada Personal",
       "artist": "Soda Stereo",
-      "title": "nada-personal",
+      "title": "Nada Personal",
     },
     Object {
+      "album": "El Último Concierto B (En Vivo)",
       "artist": "Soda Stereo",
-      "title": "un-mill%C3%B3n-de-a%C3%B1os-luz-en-vivo",
+      "title": "Un Millón de Años Luz (En Vivo)",
     },
   ],
   "type": "playlist",
@@ -140,6 +155,7 @@ Object {
 
 exports[`autogetsong 1`] = `
 Object {
+  "album": "real growth takes time - EP",
   "artist": "Sody",
   "title": "butterfly",
   "type": "song",
@@ -152,62 +168,162 @@ Object {
   "name": "Soda Stereo Essentials",
   "tracks": Array [
     Object {
+      "album": "Canción Animal",
+      "artist": "Soda Stereo",
+      "title": "De Música Ligera",
+    },
+    Object {
+      "album": "Signos",
+      "artist": "Soda Stereo",
+      "title": "Persiana Américana",
+    },
+    Object {
+      "album": "Sueño Stereo",
+      "artist": "Soda Stereo",
+      "title": "Ella Usó Mi Cabeza Como un Revólver",
+    },
+    Object {
+      "album": "Nada Personal",
+      "artist": "Soda Stereo",
+      "title": "Cuando Pase el Temblor",
+    },
+    Object {
+      "album": "Dynamo",
+      "artist": "Soda Stereo",
+      "title": "Primavera 0",
+    },
+    Object {
+      "album": "MTV Unplugged: Comfort y Música para Volar",
+      "artist": "Soda Stereo",
+      "title": "En la Ciudad de la Furia",
+    },
+    Object {
+      "album": "Canción Animal",
+      "artist": "Soda Stereo",
+      "title": "Té para Tres",
+    },
+    Object {
+      "album": "Soda Stereo",
+      "artist": "Soda Stereo",
+      "title": "Trátame Suavemente",
+    },
+    Object {
+      "album": "Canción Animal",
+      "artist": "Soda Stereo",
+      "title": "Canción Animal",
+    },
+    Object {
+      "album": "Signos",
+      "artist": "Soda Stereo",
+      "title": "Signos",
+    },
+    Object {
+      "album": "Soda Stereo",
+      "artist": "Soda Stereo",
+      "title": "Un Misil en Mi Placard",
+    },
+    Object {
+      "album": "Nada Personal",
+      "artist": "Soda Stereo",
+      "title": "Juegos de Seducción",
+    },
+    Object {
+      "album": "Sueño Stereo",
+      "artist": "Soda Stereo",
+      "title": "Zoom",
+    },
+    Object {
+      "album": "Nada Personal",
+      "artist": "Soda Stereo",
+      "title": "Nada Personal",
+    },
+    Object {
+      "album": "El Último Concierto B (En Vivo)",
+      "artist": "Soda Stereo",
+      "title": "Un Millón de Años Luz (En Vivo)",
+    },
+  ],
+  "type": "playlist",
+}
+`;
+
+exports[`slowPlaylist 1`] = `
+Object {
+  "author": "Apple Music Pop Latino",
+  "name": "Soda Stereo Essentials",
+  "tracks": Array [
+    Object {
+      "album": "Canción Animal",
       "artist": "Soda Stereo",
       "title": "de-m%C3%BAsica-ligera",
     },
     Object {
+      "album": "Signos",
       "artist": "Soda Stereo",
       "title": "persiana-am%C3%A9ricana",
     },
     Object {
+      "album": "Sueño Stereo",
       "artist": "Soda Stereo",
       "title": "ella-us%C3%B3-mi-cabeza-como-un-rev%C3%B3lver",
     },
     Object {
+      "album": "Nada Personal",
       "artist": "Soda Stereo",
       "title": "cuando-pase-el-temblor",
     },
     Object {
+      "album": "Dynamo",
       "artist": "Soda Stereo",
       "title": "primavera-0",
     },
     Object {
+      "album": "MTV Unplugged: Comfort y Música para Volar",
       "artist": "Soda Stereo",
       "title": "en-la-ciudad-de-la-furia",
     },
     Object {
+      "album": "Canción Animal",
       "artist": "Soda Stereo",
       "title": "t%C3%A9-para-tres",
     },
     Object {
+      "album": "Soda Stereo",
       "artist": "Soda Stereo",
       "title": "tr%C3%A1tame-suavemente",
     },
     Object {
+      "album": "Canción Animal",
       "artist": "Soda Stereo",
       "title": "canci%C3%B3n-animal",
     },
     Object {
+      "album": "Signos",
       "artist": "Soda Stereo",
       "title": "signos",
     },
     Object {
+      "album": "Soda Stereo",
       "artist": "Soda Stereo",
       "title": "un-misil-en-mi-placard",
     },
     Object {
+      "album": "Nada Personal",
       "artist": "Soda Stereo",
       "title": "juegos-de-seducci%C3%B3n",
     },
     Object {
+      "album": "Sueño Stereo",
       "artist": "Soda Stereo",
       "title": "zoom",
     },
     Object {
+      "album": "Nada Personal",
       "artist": "Soda Stereo",
       "title": "nada-personal",
     },
     Object {
+      "album": "El Último Concierto B (En Vivo)",
       "artist": "Soda Stereo",
       "title": "un-mill%C3%B3n-de-a%C3%B1os-luz-en-vivo",
     },
@@ -218,6 +334,7 @@ Object {
 
 exports[`song 1`] = `
 Object {
+  "album": "real growth takes time - EP",
   "artist": "Sody",
   "title": "butterfly",
   "type": "song",

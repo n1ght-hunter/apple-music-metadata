@@ -16,9 +16,10 @@ import getSong from "apple-music-metadata";
 const songLink = "https://music.apple.com/us/album/example/1541902791?i=1541903021";
 const song = await getSong(songLink); 
 returns Promise{RawAppleSong {
-    type: 'song'
-    artist: string, 
-    title: string
+    type: "song";
+    artist: string;
+    title: string;
+    album: string;
 };}
 ```
 ## Playlist data 
@@ -26,11 +27,11 @@ returns Promise{RawAppleSong {
 import getSong from "apple-music-metadata";
 const playlistLink = "https://music.apple.com/us/playlist/example/06496496e1292466839207";
 const playlist = await getPlaylist(playlistLink); 
-returns Promise{RawApplePlaylist{
-    name: string
-    type: 'playlist'|'album'
-    author: string
-    tracks: { artist: string, title: string }[]
+returns Promise{RawApplePlaylist {
+    name: string;
+    type: "playlist" | "album";
+    author: string;
+    tracks: { artist: string; title: string; album: string };
 }}
 ```
 
