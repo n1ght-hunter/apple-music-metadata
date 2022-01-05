@@ -1,6 +1,13 @@
 import axios from "axios";
 import cheerio from "cheerio";
 
+const debugPrefix = "apple music: ";
+let debug = false;
+
+export function EnableDebug() {
+  debug = true;
+}
+
 export interface Artist {
   name: string;
   url: string;
@@ -166,13 +173,23 @@ async function search(
   url: string
 ): Promise<RawPlaylist | RawAlbum | Track | null> {
   const urlType = linkType(url);
-  const applePage = await axios.get<string>(url);
+  const page = await axios
+    .get<string>(url)
+    .then((res) => res.data)
+    .catch(() => undefined);
 
-  if (urlType === "playlist") {
-    return getRawPlaylist(applePage.data);
+  if (!page) {
+    if (debug) {
+      console.log(debugPrefix + "http request failed");
+    }
+    return null;
   }
 
-  const album = getRawAlbum(applePage.data);
+  if (urlType === "playlist") {
+    return getRawPlaylist(page);
+  }
+
+  const album = getRawAlbum(page);
 
   if (urlType === "album") {
     return album;
@@ -184,6 +201,9 @@ async function search(
 
   const id = match ? match[1] : undefined;
   if (!id) {
+    if (debug) {
+      console.log(debugPrefix + "failed to extract song id");
+    }
     return null;
   }
 
@@ -192,6 +212,9 @@ async function search(
   });
 
   if (!track) {
+    if (debug) {
+      console.log(debugPrefix + "track not found in album");
+    }
     return null;
   }
 
