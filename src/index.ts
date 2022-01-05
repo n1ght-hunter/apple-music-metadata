@@ -174,6 +174,10 @@ async function search(
 
   const album = getRawAlbum(applePage.data);
 
+  if (urlType === "album") {
+    return album;
+  }
+
   const match = new RegExp(
     /https?:\/\/music\.apple\.com\/.+?\/album\/.+?\/.+?\?i=([0-9]+)/
   ).exec(url);
@@ -183,19 +187,15 @@ async function search(
     return null;
   }
 
-  if (urlType === "song") {
-    const track = album.tracks.find((track) => {
-      return track.url.includes(`?i=${id}`);
-    });
+  const track = album.tracks.find((track) => {
+    return track.url.includes(`?i=${id}`);
+  });
 
-    if (!track) {
-      return null;
-    }
-
-    return track;
+  if (!track) {
+    return null;
   }
 
-  return getRawAlbum(applePage.data);
+  return track;
 }
 
 export default search;
