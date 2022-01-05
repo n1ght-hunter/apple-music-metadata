@@ -45,7 +45,7 @@ function getRawData(
     let data = JSON.parse(parser.DomUtils.textContent(script));
 
     const typex = data["@type"];
-    if (typex !== "MusicAlbum" || typex !== "MusicPlaylist") {
+    if (typex !== "MusicAlbum" && typex !== "MusicPlaylist") {
       continue;
     }
 
