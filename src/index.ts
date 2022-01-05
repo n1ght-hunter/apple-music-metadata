@@ -3,6 +3,7 @@ import { Document } from "domhandler";
 import * as parser from "htmlparser2";
 
 export interface Track {
+  author: string;
   duration: string;
   title: string;
   url: string;
@@ -52,6 +53,7 @@ function getRawData(
     if (type === "album") {
       const tracks = data.workExample.map((t: any) => {
         const track: Track = {
+          author: data.byArtist.name,
           duration: t.duration,
           title: t.name,
           url: t.url,
@@ -77,6 +79,7 @@ function getRawData(
     } else {
       const tracks = data.track.map((t: any) => {
         const track: Track = {
+          author: data.author.name,
           duration: t.duration,
           title: t.name,
           url: t.url,
