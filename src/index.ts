@@ -38,11 +38,6 @@ export interface PartialPlaylist {
   author: string;
 }
 
-/**
- * @param {Document} document
- * @param {boolean} album
- * @returns {Promise<?RawApplePlaylist>}
- */
 export async function findJSONLD(
   document: Document,
   album: boolean = false,
@@ -93,7 +88,7 @@ export async function findJSONLD(
         name: name as string,
         author: author.name as string,
         tracks: await Promise.all(
-          track.map(async (songData: any) => await getSong(songData.url, true))
+          track.map(async (songData: any) => await search(songData.url))
         ),
       };
     }
@@ -119,50 +114,18 @@ export async function fastPlaylist(result: AxiosResponse<string, any>) {
   return Playlist;
 }
 
-/**
- * @param {string} url
- * @returns {Promise<RawAppleSong>}
- */
-async function getSong(
-  url: string,
-  playlist: boolean = false
-): Promise<RawAppleSong | undefined> {
-  const result = await axios.get<string>(url);
-  const document = parser.parseDocument(result.data);
-  const { artist, album } = (await findJSONLD(document)) as PartialSong;
-  const regexName = RegExp(/https?:\/\/music\.apple\.com\/.+?\/.+?\/(.+?)\//);
-  const title = regexName.exec(url)?.[1] as string;
-
-  const song: RawAppleSong = {
-    artist,
-    title,
-    album,
-  };
-
-  if (playlist === false) {
-    song.type = "song";
-  }
-
-  return song;
-}
-
-/**
- * @param {string} url
- * @returns {Promise<?RawApplePlaylist>}
- */
-async function getPlaylist(url: string): Promise<RawApplePlaylist | undefined> {
-  const result = await axios.get<string>(url);
-  const document = parser.parseDocument(result.data);
-  try {
-    const tracks = await fastPlaylist(result);
-    const { type, name, author } = (await findJSONLD(
-      document,
-      true,
-      true
-    )) as PartialPlaylist;
-    return { type, name, author, tracks } as RawApplePlaylist;
-  } catch (error) {
-    return (await findJSONLD(document, true)) as RawApplePlaylist;
+function linkType(url: string) {
+  if (
+    RegExp(/https?:\/\/music\.apple\.com\/.+?\/playlist\//).test(url) ||
+    !url.includes("?i=")
+  ) {
+    return "playlist";
+  } else if (
+    RegExp(/https?:\/\/music\.apple\.com\/.+?\/album\/.+?\/.+?\?i=/).test(url)
+  ) {
+    return "song";
+  } else {
+    throw Error("Apple Music link is invalid");
   }
 }
 
@@ -173,17 +136,31 @@ async function getPlaylist(url: string): Promise<RawApplePlaylist | undefined> {
 export async function search(
   url: string
 ): Promise<RawApplePlaylist | RawAppleSong | undefined> {
-  if (
-    RegExp(/https?:\/\/music\.apple\.com\/.+?\/playlist\//).test(url) ||
-    !url.includes("?i=")
-  ) {
-    return await getPlaylist(url);
+  const urlType = linkType(url);
+  const applePage = await axios.get<string>(url);
+  const document = parser.parseDocument(applePage.data);
+
+  if (urlType === "playlist") {
+    const tracks = await fastPlaylist(applePage);
+    const { type, name, author } = (await findJSONLD(
+      document,
+      true,
+      true
+    )) as PartialPlaylist;
+    return { type, name, author, tracks } as RawApplePlaylist;
   }
-  if (
-    RegExp(/https?:\/\/music\.apple\.com\/.+?\/album\/.+?\/.+?\?i=/).test(url)
-  ) {
-    return await getSong(url);
-  }
+
+  const { artist, album } = (await findJSONLD(document)) as PartialSong;
+  const regexName = RegExp(/https?:\/\/music\.apple\.com\/.+?\/.+?\/(.+?)\//);
+  const title = regexName.exec(url)?.[1] as string;
+
+  const song: RawAppleSong = {
+    artist,
+    title,
+    album,
+  };
+
+  return song;
 }
 
 export default search;
