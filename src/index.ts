@@ -1,9 +1,13 @@
 import axios from "axios";
-import { Document } from "domhandler";
-import * as parser from "htmlparser2";
+import cheerio from "cheerio";
+
+export interface Artist {
+  name: string;
+  url: string;
+}
 
 export interface Track {
-  author: string;
+  artist: Artist;
   duration: string;
   title: string;
   url: string;
@@ -11,97 +15,133 @@ export interface Track {
 }
 
 export interface RawAlbum {
-  artist: {
-    name: string;
-    url: string;
-  };
-  datePublished: string;
-  genre: string[];
+  artist: Artist;
   description: string;
+  numTracks: number;
   title: string;
   tracks: Track[];
   type: "album";
 }
 
 export interface RawPlaylist {
-  author: string;
+  creator: Artist;
   description: string;
-  title: string;
   numTracks: number;
+  title: string;
   tracks: Track[];
   type: "playlist";
 }
 
-function getRawData(
-  document: Document,
-  type: "playlist" | "album"
-): RawPlaylist | RawAlbum | null {
-  const scripts = parser.DomUtils.findAll((element) => {
-    if (element.type !== "script") return false;
+function getRawPlaylist(document: string): RawPlaylist {
+  const $ = cheerio.load(document);
 
-    return element.attribs.type === "application/ld+json";
-  }, document.children);
+  const tracks: Track[] = [];
 
-  for (const script of scripts) {
-    let data = JSON.parse(parser.DomUtils.textContent(script));
+  const songList = $("div.songs-list-row").toArray();
+  songList.forEach((song) => {
+    const lookArtist = $(song)
+      .find("div.songs-list__col--artist")
+      .find("a.songs-list-row__link");
 
-    const typex = data["@type"];
-    if (typex !== "MusicAlbum" && typex !== "MusicPlaylist") {
-      continue;
-    }
+    const track: Track = {
+      artist: {
+        name: lookArtist.text(),
+        url: lookArtist.attr("href") ?? "",
+      },
+      title: $(song)
+        .find("div.songs-list__col--song")
+        .find("div.songs-list-row__song-name")
+        .text(),
+      duration:
+        $(song)
+          .find("div.songs-list__col--time")
+          .find("time")
+          .attr("datetime") ?? "",
+      url:
+        $(song)
+          .find("div.songs-list__col--album")
+          .find("a.songs-list-row__link")
+          .attr("href") ?? "",
+      type: "song",
+    };
 
-    if (type === "album") {
-      const tracks = data.workExample.map((t: any) => {
-        const track: Track = {
-          author: data.byArtist.name,
-          duration: t.duration,
-          title: t.name,
-          url: t.url,
-          type: "song",
-        };
-        return track;
-      });
+    tracks.push(track);
+  });
 
-      const final: RawAlbum = {
-        artist: {
-          name: data.byArtist.name,
-          url: data.byArtist.url,
-        },
-        datePublished: data.datePublished,
-        description: data.description,
-        genre: data.genre,
-        title: data.name,
-        tracks,
-        type,
-      };
+  const product = $("div.product-page-header");
+  const creator = product.find("div.product-creator").find("a.dt-link-to");
 
-      return final;
-    } else {
-      const tracks = data.track.map((t: any) => {
-        const track: Track = {
-          author: data.author.name,
-          duration: t.duration,
-          title: t.name,
-          url: t.url,
-          type: "song",
-        };
-        return track;
-      });
+  const playlist: RawPlaylist = {
+    title: product.find("h1.product-name").text().trim(),
+    description: product
+      .find("div.product-page-header__metadata--notes")
+      .text()
+      .trim(),
+    creator: {
+      name: creator.text().trim(),
+      url: "https://music.apple.com" + creator.attr("href") ?? "",
+    },
+    tracks,
+    numTracks: tracks.length,
+    type: "playlist",
+  };
+  return playlist;
+}
 
-      const final: RawPlaylist = {
-        author: data.author.name,
-        description: data.description,
-        numTracks: data.numTracks,
-        title: data.name,
-        tracks,
-        type,
-      };
+function getRawAlbum(document: string): RawAlbum {
+  const $ = cheerio.load(document);
 
-      return final;
-    }
-  }
+  const tracks: Track[] = [];
 
-  return null;
+  const product = $("div.product-page-header");
+  const creator = product.find("div.product-creator").find("a.dt-link-to");
+  const artist = {
+    name: creator.text().trim(),
+    url: creator.attr("href") ?? "",
+  };
+
+  const albumUrl = $("meta[property='og:url']").attr("content");
+  const songList = $("div.songs-list-row").toArray();
+  songList.forEach((song) => {
+    const track: Track = {
+      artist,
+      title: $(song)
+        .find("div.songs-list__col--song")
+        .find("div.songs-list-row__song-name")
+        .text(),
+      duration:
+        $(song)
+          .find("div.songs-list__col--time")
+          .find("time")
+          .attr("datetime") ?? "",
+      url: albumUrl
+        ? albumUrl +
+            "?i=" +
+            JSON.parse(
+              $(song)
+                .find("div.songs-list__col--time")
+                .find("button.preview-button")
+                .attr("data-metrics-click") ?? "{ targetId: 0 }"
+            )["targetId"] ?? ""
+        : "",
+      type: "song",
+    };
+
+    tracks.push(track);
+  });
+
+  const playlist: RawAlbum = {
+    title: product.find("h1.product-name").text().trim(),
+    description: product
+      .find("div.product-page-header__metadata--notes")
+      .text()
+      .trim(),
+    artist,
+    tracks,
+    numTracks: tracks.length,
+    type: "album",
+  };
+  return playlist;
 }
 
 function linkType(url: string) {
@@ -127,33 +167,35 @@ async function search(
 ): Promise<RawPlaylist | RawAlbum | Track | null> {
   const urlType = linkType(url);
   const applePage = await axios.get<string>(url);
-  const document = parser.parseDocument(applePage.data);
 
-  if (urlType === "song") {
-    const album = getRawData(document, "album");
-    if (!album || album.type !== "album") {
-      return null;
-    }
-
-    const match = url.match(
-      new RegExp(
-        /https?:\/\/music\.apple\.com\/.+?\/album\/.+?\/.+?\?i=([0-9]+)/
-      )
-    );
-
-    if (!match) {
-      return null;
-    }
-
-    const id = match[1];
-    if (!id) {
-      return null;
-    }
-
-    return album.tracks.find((t) => t.url.includes(`i=${id}`)) ?? null;
+  if (urlType === "playlist") {
+    return getRawPlaylist(applePage.data);
   }
 
-  return getRawData(document, urlType);
+  const album = getRawAlbum(applePage.data);
+
+  const match = new RegExp(
+    /https?:\/\/music\.apple\.com\/.+?\/album\/.+?\/.+?\?i=([0-9]+)/
+  ).exec(url);
+
+  const id = match ? match[1] : undefined;
+  if (!id) {
+    return null;
+  }
+
+  if (urlType === "song") {
+    const track = album.tracks.find((track) => {
+      return track.url.includes(`?i=${id}`);
+    });
+
+    if (!track) {
+      return null;
+    }
+
+    return track;
+  }
+
+  return getRawAlbum(applePage.data);
 }
 
 export default search;
