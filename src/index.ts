@@ -44,6 +44,11 @@ function getRawData(
   for (const script of scripts) {
     let data = JSON.parse(parser.DomUtils.textContent(script));
 
+    const typex = data["@type"];
+    if (typex !== "MusicAlbum" || typex !== "MusicPlaylist") {
+      continue;
+    }
+
     if (type === "album") {
       const tracks = data.workExample.map((t: any) => {
         const track: Track = {
