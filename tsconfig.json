@@ -1,19 +1,16 @@
 {
-    "compilerOptions": {
-      "target": "ES6",
-      "module": "commonjs",
-      "allowJs": true,
-      "declaration": true,
-      "rootDir": "src",
-      "outDir": "dist",
-      "strict": true,
-      "strictPropertyInitialization": false,
-      "esModuleInterop": true,
-      "pretty": true,
-      "skipLibCheck": true,
-      "resolveJsonModule": true
-    },
-    "include": [
-      "src/**/*",
-    ],
-  }
+  "compilerOptions": {
+    "target": "ESNEXT",
+    "module": "CommonJS",
+    "declaration": true,
+    "rootDir": "src",
+    "outDir": "dist",
+    "strict": true,
+    "strictNullChecks": true,
+    "esModuleInterop": true,
+    "pretty": true,
+    "skipLibCheck": false,
+    "resolveJsonModule": true
+  },
+  "exclude": ["dist", "tests"]
+}
