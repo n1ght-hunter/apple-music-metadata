@@ -1,166 +1,151 @@
+import axios from "axios";
 import { Document } from "domhandler";
-import axios, { AxiosResponse } from "axios";
-import parser, { DomUtils } from "htmlparser2";
-import axiosRetry from "axios-retry";
-import cheerio from "cheerio";
-
-// apple will somtimes reject request due to overload this will retry each request up to 5 times
-axiosRetry(axios, { retries: 5 });
-
-export interface RawApplePlaylist {
-  name: string;
-  type: "playlist" | "album";
-  author: string;
-  tracks: Track[];
-}
-
-export interface RawAppleSong {
-  type?: "song";
-  artist: string;
-  title: string;
-  album: string;
-}
+import * as parser from "htmlparser2";
 
 export interface Track {
-  artist: string;
+  duration: string;
   title: string;
-  album: string;
+  url: string;
+  type: "song";
 }
 
-export interface PartialSong {
-  artist: string;
-  album: string;
+export interface RawAlbum {
+  artist: {
+    name: string;
+    url: string;
+  };
+  datePublished: string;
+  genre: string[];
+  description: string;
+  title: string;
+  tracks: Track[];
+  type: "album";
 }
 
-export interface PartialPlaylist {
-  name: string;
-  type: "playlist";
+export interface RawPlaylist {
   author: string;
+  description: string;
+  title: string;
+  numTracks: number;
+  tracks: Track[];
+  type: "playlist";
 }
 
-async function findJSONLD(
+function getRawData(
   document: Document,
-  album: boolean = false,
-  fast: boolean = false
-): Promise<RawApplePlaylist | PartialSong | PartialPlaylist | undefined> {
-  const scripts = DomUtils.findAll((element) => {
+  type: "playlist" | "album"
+): RawPlaylist | RawAlbum | null {
+  const scripts = parser.DomUtils.findAll((element) => {
     if (element.type !== "script") return false;
 
     return element.attribs.type === "application/ld+json";
   }, document.children);
 
   for (const script of scripts) {
-    let data = JSON.parse(DomUtils.textContent(script));
-    if ("@graph" in data) data = data["@graph"];
-    if (data["@type"] === "MusicAlbum" && !album) {
-      return {
-        artist: data.byArtist.name as string,
-        album: data.name as string,
-      };
-    }
-    if (data["@type"] === "MusicAlbum" && album) {
-      let { name, byArtist, tracks } = data;
+    let data = JSON.parse(parser.DomUtils.textContent(script));
 
-      return {
-        type: "album",
-        name: name as string,
-        author: byArtist.name as string,
-        tracks: tracks.map((songData: any) => {
-          return {
-            artist: byArtist.name as string,
-            title: songData.name as string,
-          };
-        }),
+    if (type === "album") {
+      const tracks = data.workExample.map((t: any) => {
+        const track: Track = {
+          duration: t.duration,
+          title: t.name,
+          url: t.url,
+          type: "song",
+        };
+        return track;
+      });
+
+      const final: RawAlbum = {
+        artist: {
+          name: data.byArtist.name,
+          url: data.byArtist.url,
+        },
+        datePublished: data.datePublished,
+        description: data.description,
+        genre: data.genre,
+        title: data.name,
+        tracks,
+        type,
       };
-    }
-    if (data["@type"] === "MusicPlaylist" && fast) {
-      let { name, author } = data;
-      return {
-        type: "playlist",
-        name: name as string,
-        author: author.name as string,
+
+      return final;
+    } else {
+      const tracks = data.track.map((t: any) => {
+        const track: Track = {
+          duration: t.duration,
+          title: t.name,
+          url: t.url,
+          type: "song",
+        };
+        return track;
+      });
+
+      const final: RawPlaylist = {
+        author: data.author.name,
+        description: data.description,
+        numTracks: data.numTracks,
+        title: data.name,
+        tracks,
+        type,
       };
-    }
-    if (data["@type"] === "MusicPlaylist") {
-      let { name, author, track } = data;
-      return {
-        type: "playlist",
-        name: name as string,
-        author: author.name as string,
-        tracks: await Promise.all(
-          track.map(async (songData: any) => await search(songData.url))
-        ),
-      };
+
+      return final;
     }
   }
-}
 
-async function fastPlaylist(result: AxiosResponse<string, any>) {
-  let $ = cheerio.load(result.data),
-    aTitleDivs = $(".songs-list-row__song-name").toArray(),
-    aArtistDivs = $(".songs-list-row__link").toArray(),
-    Playlist = [],
-    i,
-    j = 0;
-
-  for (i = 0; i < aTitleDivs.length; i++) {
-    Playlist.push({
-      album: (aArtistDivs[j + 2].children[0] as any).data as string,
-      artist: (aArtistDivs[j].children[0] as any).data as string,
-      title: (aTitleDivs[i].children[0] as any).data as string,
-    });
-    j += 3;
-  }
-  return Playlist;
+  return null;
 }
 
 function linkType(url: string) {
   if (
-    RegExp(/https?:\/\/music\.apple\.com\/.+?\/playlist\//).test(url) ||
-    !url.includes("?i=")
-  ) {
-    return "playlist";
-  } else if (
-    RegExp(/https?:\/\/music\.apple\.com\/.+?\/album\/.+?\/.+?\?i=/).test(url)
+    RegExp(
+      /https?:\/\/music\.apple\.com\/.+?\/album\/.+?\/.+?\?i=([0-9]+)/
+    ).test(url)
   ) {
     return "song";
+  } else if (
+    RegExp(/https?:\/\/music\.apple\.com\/.+?\/playlist\//).test(url)
+  ) {
+    return "playlist";
+  } else if (RegExp(/https?:\/\/music\.apple\.com\/.+?\/album\//).test(url)) {
+    return "album";
   } else {
     throw Error("Apple Music link is invalid");
   }
 }
 
-/**
- * @param {string} url
- * @returns {Promise<Promise<RawApplePlaylist|RawAppleSong|undefined>>}
- */
 async function search(
   url: string
-): Promise<RawApplePlaylist | RawAppleSong | undefined> {
+): Promise<RawPlaylist | RawAlbum | Track | null> {
   const urlType = linkType(url);
   const applePage = await axios.get<string>(url);
   const document = parser.parseDocument(applePage.data);
 
-  if (urlType === "playlist") {
-    const tracks = await fastPlaylist(applePage);
-    const { type, name, author } = (await findJSONLD(
-      document,
-      true,
-      true
-    )) as PartialPlaylist;
-    return { type, name, author, tracks } as RawApplePlaylist;
+  if (urlType === "song") {
+    const album = getRawData(document, "album");
+    if (!album || album.type !== "album") {
+      return null;
+    }
+
+    const match = url.match(
+      new RegExp(
+        /https?:\/\/music\.apple\.com\/.+?\/album\/.+?\/.+?\?i=([0-9]+)/
+      )
+    );
+
+    if (!match) {
+      return null;
+    }
+
+    const id = match[1];
+    if (!id) {
+      return null;
+    }
+
+    return album.tracks.find((t) => t.url.includes(`i=${id}`)) ?? null;
   }
 
-  const { artist, album } = (await findJSONLD(document)) as PartialSong;
-  const regexName = RegExp(/https?:\/\/music\.apple\.com\/.+?\/.+?\/(.+?)\//);
-  const title = regexName.exec(url)?.[1] as string;
-
-  const song: RawAppleSong = {
-    artist,
-    title,
-    album,
-  };
-
-  return song;
+  return getRawData(document, urlType);
 }
 
 export default search;
