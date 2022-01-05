@@ -133,7 +133,7 @@ function linkType(url: string) {
  * @param {string} url
  * @returns {Promise<Promise<RawApplePlaylist|RawAppleSong|undefined>>}
  */
-export async function autoGetApple(
+export async function search(
   url: string
 ): Promise<RawApplePlaylist | RawAppleSong | undefined> {
   const urlType = linkType(url);
