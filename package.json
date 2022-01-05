@@ -2,33 +2,33 @@
   "name": "apple-music-metadata",
   "version": "1.0.9",
   "description": "gets apple music metadata for songs and playlists links",
-  "main": "dist/index.js",
-  "scripts": {
-    "start": "ts-node ./src/index.ts",
-    "test": "jest",
-    "build": "tsc"
-  },
-  "jest": {
-    "transform": {
-      ".(ts|tsx)": "ts-jest"
-    },
-    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js"
-    ]
-  },
   "keywords": [
     "music",
     "apple music",
     "apple music metadata"
   ],
-  "author": "night_hunter",
-  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/Night-Hunter-NF/apple-music-metadata"
+  },
+  "license": "MIT",
+  "author": "night_hunter",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "ts-node ./src/index.ts",
+    "test": "jest"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "transform": {
+      ".(ts|tsx)": "ts-jest"
+    }
   },
   "dependencies": {
     "axios": "^0.24.0",
