@@ -38,7 +38,7 @@ export interface PartialPlaylist {
   author: string;
 }
 
-export async function findJSONLD(
+async function findJSONLD(
   document: Document,
   album: boolean = false,
   fast: boolean = false
@@ -95,7 +95,7 @@ export async function findJSONLD(
   }
 }
 
-export async function fastPlaylist(result: AxiosResponse<string, any>) {
+async function fastPlaylist(result: AxiosResponse<string, any>) {
   let $ = cheerio.load(result.data),
     aTitleDivs = $(".songs-list-row__song-name").toArray(),
     aArtistDivs = $(".songs-list-row__link").toArray(),
