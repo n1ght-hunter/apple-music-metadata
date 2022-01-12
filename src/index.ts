@@ -120,7 +120,8 @@ function getRawAlbum(document: string): RawAlbum {
         $(song)
           .find("div.songs-list__col--time")
           .find("time")
-          .attr("datetime") ?? "",
+          .text()
+          .trim(),
       url: albumUrl
         ? albumUrl +
             "?i=" +
