@@ -1,8 +1,9 @@
 {
   "name": "apple-music-metadata",
   "version": "2.0.0",
-  "description": "gets apple music metadata for songs and playlists links",
+  "description": "gets apple music metadata for songs, albums and playlists links",
   "keywords": [
+    "typescript",
     "music",
     "apple music",
     "apple music metadata"
@@ -16,9 +17,24 @@
     "Night_Hunter",
     "Harry <indianoceanroleplay@gmail.com> (https://github.com/oceanroleplay)"
   ],
-  "main": "dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./build/esm/index.js",
+      "require": "./build/cjs/index.js"
+    }
+  },
+  "files": [
+    "build",
+    "LICENSE",
+    "README.md",
+    "package.json"
+  ],
+  "main": "./build/cjs/index.js",
+  "module": "./build/esm/index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "npm run build:esm && npm run build:cjs",
+    "build:cjs": "tsc --module CommonJs --outDir build/cjs",
+    "build:esm": "tsc",
     "start": "ts-node ./src/index.ts",
     "test": "jest"
   },
