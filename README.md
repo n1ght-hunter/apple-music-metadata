@@ -26,7 +26,7 @@ appleMusic(
     url: 'https://music.apple.com/us/artist/sody/271348279'
   },
   title: 'butterfly',
-  duration: 'PT3M9S',
+  duration: '189', in seconds
   url: 'https://music.apple.com/us/album/butterfly/1541902791?i=1541903021?i=1541903021',
   type: 'song'
 }
