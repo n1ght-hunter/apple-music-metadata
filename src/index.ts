@@ -63,7 +63,8 @@ function getRawPlaylist(document: string): RawPlaylist {
         $(song)
           .find("div.songs-list__col--time")
           .find("time")
-          .attr("datetime") ?? "",
+          .text()
+          .trim(),
       url:
         $(song)
           .find("div.songs-list__col--album")
