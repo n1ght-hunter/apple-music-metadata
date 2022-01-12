@@ -15,7 +15,7 @@ export interface Artist {
 
 export interface Track {
   artist: Artist;
-  duration: string;
+  duration: number;
   title: string;
   url: string;
   type: "song";
@@ -59,12 +59,14 @@ function getRawPlaylist(document: string): RawPlaylist {
         .find("div.songs-list__col--song")
         .find("div.songs-list-row__song-name")
         .text(),
-      duration:
-        $(song)
-          .find("div.songs-list__col--time")
-          .find("time")
-          .text()
-          .trim(),
+      duration: $(song)
+        .find("div.songs-list__col--time")
+        .find("time")
+        .text()
+        .trim()
+        .split(":")
+        .map((value) => Number(value))
+        .reduce((acc, time) => 60 * acc + time),
       url:
         $(song)
           .find("div.songs-list__col--album")
@@ -117,12 +119,14 @@ function getRawAlbum(document: string): RawAlbum {
         .find("div.songs-list__col--song")
         .find("div.songs-list-row__song-name")
         .text(),
-      duration:
-        $(song)
-          .find("div.songs-list__col--time")
-          .find("time")
-          .text()
-          .trim(),
+      duration: $(song)
+        .find("div.songs-list__col--time")
+        .find("time")
+        .text()
+        .trim()
+        .split(":")
+        .map((value) => Number(value))
+        .reduce((acc, time) => 60 * acc + time),
       url: albumUrl
         ? albumUrl +
             "?i=" +
