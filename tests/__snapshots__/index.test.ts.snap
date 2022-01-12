@@ -1,0 +1,1114 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`album 1`] = `
+Object {
+  "artist": Object {
+    "name": "Sarah Blondin",
+    "url": "https://music.apple.com/us/artist/sarah-blondin/1602422414",
+  },
+  "description": "",
+  "numTracks": 7,
+  "title": "Meditations for Living an Awakened Life",
+  "tracks": Array [
+    Object {
+      "artist": Object {
+        "name": "Sarah Blondin",
+        "url": "https://music.apple.com/us/artist/sarah-blondin/1602422414",
+      },
+      "duration": 1697,
+      "title": "Blessing the Body, Mind & Spirit",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/meditations-for-living-an-awakened-life/1602431360?i=1602431361",
+    },
+    Object {
+      "artist": Object {
+        "name": "Sarah Blondin",
+        "url": "https://music.apple.com/us/artist/sarah-blondin/1602422414",
+      },
+      "duration": 835,
+      "title": "I am here. I am home.",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/meditations-for-living-an-awakened-life/1602431360?i=1602431364",
+    },
+    Object {
+      "artist": Object {
+        "name": "Sarah Blondin",
+        "url": "https://music.apple.com/us/artist/sarah-blondin/1602422414",
+      },
+      "duration": 935,
+      "title": "I love you. I am listening.",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/meditations-for-living-an-awakened-life/1602431360?i=1602431365",
+    },
+    Object {
+      "artist": Object {
+        "name": "Sarah Blondin",
+        "url": "https://music.apple.com/us/artist/sarah-blondin/1602422414",
+      },
+      "duration": 1121,
+      "title": "Holding Center",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/meditations-for-living-an-awakened-life/1602431360?i=1602431366",
+    },
+    Object {
+      "artist": Object {
+        "name": "Sarah Blondin",
+        "url": "https://music.apple.com/us/artist/sarah-blondin/1602422414",
+      },
+      "duration": 1181,
+      "title": "Look & it Shall Lift",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/meditations-for-living-an-awakened-life/1602431360?i=1602431367",
+    },
+    Object {
+      "artist": Object {
+        "name": "Sarah Blondin",
+        "url": "https://music.apple.com/us/artist/sarah-blondin/1602422414",
+      },
+      "duration": 688,
+      "title": "Change Your Story.",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/meditations-for-living-an-awakened-life/1602431360?i=1602431368",
+    },
+    Object {
+      "artist": Object {
+        "name": "Sarah Blondin",
+        "url": "https://music.apple.com/us/artist/sarah-blondin/1602422414",
+      },
+      "duration": 924,
+      "title": "Sleep. Rest. Reset.",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/meditations-for-living-an-awakened-life/1602431360?i=1602431369",
+    },
+  ],
+  "type": "album",
+}
+`;
+
+exports[`playlist 1`] = `
+Object {
+  "creator": Object {
+    "name": "Apple Music Classic Rock",
+    "url": "https://music.apple.com/us/curator/apple-music-classic-rock/976439531",
+  },
+  "description": "Tired? Spaced? Just a little blah? Let these rock and alternative jams—from straight-up classics to today's cutting edge—be your battery. When the charge fades, plug in again: We update these tracks regularly, so if you like a song, add it to your library.",
+  "numTracks": 100,
+  "title": "Jumpstart",
+  "tracks": Array [
+    Object {
+      "artist": Object {
+        "name": "MGMT",
+        "url": "https://music.apple.com/us/artist/mgmt/251553551",
+      },
+      "duration": 229,
+      "title": "Electric Feel",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/electric-feel/264720008?i=264720106",
+    },
+    Object {
+      "artist": Object {
+        "name": "Foals",
+        "url": "https://music.apple.com/us/artist/foals/192738057",
+      },
+      "duration": 263,
+      "title": "Wake Me Up",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/wake-me-up/1590409376?i=1590409380",
+    },
+    Object {
+      "artist": Object {
+        "name": "Franz Ferdinand",
+        "url": "https://music.apple.com/us/artist/franz-ferdinand/6596751",
+      },
+      "duration": 221,
+      "title": "Billy Goodbye",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/billy-goodbye/1591595225?i=1591595495",
+    },
+    Object {
+      "artist": Object {
+        "name": "Weezer",
+        "url": "https://music.apple.com/us/artist/weezer/115234",
+      },
+      "duration": 200,
+      "title": "Island In the Sun",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/island-in-the-sun/1440868131?i=1440868258",
+    },
+    Object {
+      "artist": Object {
+        "name": "Lovejoy",
+        "url": "https://music.apple.com/us/artist/lovejoy/1566790456",
+      },
+      "duration": 169,
+      "title": "Oh Yeah, You Gonna Cry?",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/oh-yeah-you-gonna-cry/1589990166?i=1589990169",
+    },
+    Object {
+      "artist": Object {
+        "name": "Glass Animals",
+        "url": "https://music.apple.com/us/artist/glass-animals/528928008",
+      },
+      "duration": 195,
+      "title": "I Don't Wanna Talk (I Just Wanna Dance)",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/i-dont-wanna-talk-i-just-wanna-dance/1584659768?i=1584660705",
+    },
+    Object {
+      "artist": Object {
+        "name": "Beastie Boys",
+        "url": "https://music.apple.com/us/artist/beastie-boys/1971863",
+      },
+      "duration": 208,
+      "title": "Fight for Your Right",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/fight-for-your-right/1440912031?i=1440912353",
+    },
+    Object {
+      "artist": Object {
+        "name": "Wallows",
+        "url": "https://music.apple.com/us/artist/wallows/1225257328",
+      },
+      "duration": 223,
+      "title": "I Don't Want to Talk",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/i-dont-want-to-talk/1585444749?i=1585444754",
+    },
+    Object {
+      "artist": Object {
+        "name": "Alex Lahey",
+        "url": "https://music.apple.com/us/artist/alex-lahey/1044164640",
+      },
+      "duration": 181,
+      "title": "Spike the Punch",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/spike-the-punch/1587090208?i=1587090428",
+    },
+    Object {
+      "artist": Object {
+        "name": "Phoenix",
+        "url": "https://music.apple.com/us/artist/phoenix/5500360",
+      },
+      "duration": 241,
+      "title": "Lisztomania",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/lisztomania/1450828963?i=1450828967",
+    },
+    Object {
+      "artist": Object {
+        "name": "Spoon",
+        "url": "https://music.apple.com/us/artist/spoon/703784",
+      },
+      "duration": 193,
+      "title": "The Hardest Cut",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/the-hardest-cut/1582666355?i=1582666599",
+    },
+    Object {
+      "artist": Object {
+        "name": "Beach Bunny",
+        "url": "https://music.apple.com/us/artist/beach-bunny/1147783278",
+      },
+      "duration": 186,
+      "title": "Oxygen",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/oxygen/1589473324?i=1589473325",
+    },
+    Object {
+      "artist": Object {
+        "name": "The Black Keys",
+        "url": "https://music.apple.com/us/artist/the-black-keys/5893059",
+      },
+      "duration": 193,
+      "title": "Lonely Boy (2021 Remaster)",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/lonely-boy-2021-remaster/1586008722?i=1586008723",
+    },
+    Object {
+      "artist": Object {
+        "name": "Kasabian",
+        "url": "https://music.apple.com/us/artist/kasabian/20478838",
+      },
+      "duration": 203,
+      "title": "ALYGATYR",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/alygatyr/1589991467?i=1589991642",
+    },
+    Object {
+      "artist": Object {
+        "name": "Green Day",
+        "url": "https://music.apple.com/us/artist/green-day/954266",
+      },
+      "duration": 189,
+      "title": "Holy Toledo! (from the Original Motion Picture “Mark, Mary & Some Other People”)",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/holy-toledo-from-the-original-motion-picture-mark/1592160279?i=1592160280",
+    },
+    Object {
+      "artist": Object {
+        "name": "Local H",
+        "url": "https://music.apple.com/us/artist/local-h/37771",
+      },
+      "duration": 227,
+      "title": "All the Kids Are Right",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/all-the-kids-are-right/1443784580?i=1443784814",
+    },
+    Object {
+      "artist": Object {
+        "name": "Blondes",
+        "url": "https://music.apple.com/us/artist/blondes/1450693081",
+      },
+      "duration": 265,
+      "title": "Out the Neighbourhood",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/out-the-neighbourhood/1589218266?i=1589218269",
+    },
+    Object {
+      "artist": Object {
+        "name": "Måneskin",
+        "url": "https://music.apple.com/us/artist/m%C3%A5neskin/1312874741",
+      },
+      "duration": 186,
+      "title": "MAMMAMIA",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/mammamia/1587366970?i=1587366984",
+    },
+    Object {
+      "artist": Object {
+        "name": "The Offspring",
+        "url": "https://music.apple.com/us/artist/the-offspring/2820865",
+      },
+      "duration": 257,
+      "title": "Self Esteem",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/self-esteem/1485043082?i=1485043450",
+    },
+    Object {
+      "artist": Object {
+        "name": "Goodbye June",
+        "url": "https://music.apple.com/us/artist/goodbye-june/532276505",
+      },
+      "duration": 247,
+      "title": "Step Aside",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/step-aside/1580413030?i=1580413031",
+    },
+    Object {
+      "artist": Object {
+        "name": "Maggie Lindemann",
+        "url": "https://music.apple.com/us/artist/maggie-lindemann/1035916223",
+      },
+      "duration": 156,
+      "title": "She Knows It",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/she-knows-it/1590449026?i=1590449042",
+    },
+    Object {
+      "artist": Object {
+        "name": "Sublime",
+        "url": "https://music.apple.com/us/artist/sublime/63480",
+      },
+      "duration": 185,
+      "title": "Santeria",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/santeria/1573974349?i=1573975737",
+    },
+    Object {
+      "artist": Object {
+        "name": "Jack White",
+        "url": "https://music.apple.com/us/artist/jack-white/826980",
+      },
+      "duration": 245,
+      "title": "Taking Me Back",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/taking-me-back/1589541591?i=1589541594",
+    },
+    Object {
+      "artist": Object {
+        "name": "Halsey",
+        "url": "https://music.apple.com/us/artist/halsey/324916925",
+      },
+      "duration": 265,
+      "title": "You asked for this",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/you-asked-for-this/1574984039?i=1574984470",
+    },
+    Object {
+      "artist": Object {
+        "name": "Foo Fighters",
+        "url": "https://music.apple.com/us/artist/foo-fighters/6906197",
+      },
+      "duration": 231,
+      "title": "Monkey Wrench",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/monkey-wrench/362133451?i=362133453",
+    },
+    Object {
+      "artist": Object {
+        "name": "Jungle",
+        "url": "https://music.apple.com/us/artist/jungle/825833522",
+      },
+      "duration": 166,
+      "title": "Romeo (feat. Bas)",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/romeo-feat-bas/1555318008?i=1555318021",
+    },
+    Object {
+      "artist": Object {
+        "name": "Bartees Strange",
+        "url": "https://music.apple.com/us/artist/bartees-strange/1450776625",
+      },
+      "duration": 156,
+      "title": "Weights",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/weights/1583849069?i=1583849106",
+    },
+    Object {
+      "artist": Object {
+        "name": "Red Hot Chili Peppers",
+        "url": "https://music.apple.com/us/artist/red-hot-chili-peppers/889780",
+      },
+      "duration": 282,
+      "title": "Give It Away",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/give-it-away/945581828?i=945581838",
+    },
+    Object {
+      "artist": Object {
+        "name": "Mondo Cozmo",
+        "url": "https://music.apple.com/us/artist/mondo-cozmo/1137257055",
+      },
+      "duration": 167,
+      "title": "Feel Good",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/feel-good/1585443807?i=1585443808",
+    },
+    Object {
+      "artist": Object {
+        "name": "Wet Leg",
+        "url": "https://music.apple.com/us/artist/wet-leg/1569685293",
+      },
+      "duration": 140,
+      "title": "Wet Dream",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/wet-dream/1584802858?i=1584802859",
+    },
+    Object {
+      "artist": Object {
+        "name": "Bush",
+        "url": "https://music.apple.com/us/artist/bush/154751",
+      },
+      "duration": 256,
+      "title": "Machinehead",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/machinehead/1306255070?i=1306256004",
+    },
+    Object {
+      "artist": Object {
+        "name": "WALK THE MOON",
+        "url": "https://music.apple.com/us/artist/walk-the-moon/451783136",
+      },
+      "duration": 256,
+      "title": "Can You Handle My Love??",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/can-you-handle-my-love/1571361497?i=1571361501",
+    },
+    Object {
+      "artist": Object {
+        "name": "All Time Low",
+        "url": "https://music.apple.com/us/artist/all-time-low/167375968",
+      },
+      "duration": 191,
+      "title": "PMA (feat. Pale Waves)",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/pma-feat-pale-waves/1578029289?i=1578029298",
+    },
+    Object {
+      "artist": Object {
+        "name": "Muse",
+        "url": "https://music.apple.com/us/artist/muse/1093360",
+      },
+      "duration": 227,
+      "title": "Hysteria",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/hysteria/991510292?i=991510690",
+    },
+    Object {
+      "artist": Object {
+        "name": "The Knocks",
+        "url": "https://music.apple.com/us/artist/the-knocks/290983301",
+      },
+      "duration": 171,
+      "title": "Sound the Alarm (feat. Rivers Cuomo & Royal & the Serpent)",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/sound-the-alarm-feat-rivers-cuomo-royal-the-serpent/1576947171?i=1576947183",
+    },
+    Object {
+      "artist": Object {
+        "name": "Dee Gees",
+        "url": "https://music.apple.com/us/artist/dee-gees/1575914983",
+      },
+      "duration": 232,
+      "title": "You Should Be Dancing",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/you-should-be-dancing/1575914977?i=1575914981",
+    },
+    Object {
+      "artist": Object {
+        "name": "Weezer",
+        "url": "https://music.apple.com/us/artist/weezer/115234",
+      },
+      "duration": 159,
+      "title": "Buddy Holly",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/buddy-holly/1440869641?i=1440869921",
+    },
+    Object {
+      "artist": Object {
+        "name": "Justus Bennetts",
+        "url": "https://music.apple.com/us/artist/justus-bennetts/1474440235",
+      },
+      "duration": 143,
+      "title": "Real Life Sux",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/real-life-sux/1568207498?i=1568207505",
+    },
+    Object {
+      "artist": Object {
+        "name": "Milky Chance",
+        "url": "https://music.apple.com/us/artist/milky-chance/611146795",
+      },
+      "duration": 174,
+      "title": "Colorado",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/colorado/1567062091?i=1567062378",
+    },
+    Object {
+      "artist": Object {
+        "name": "Jimmy Eat World",
+        "url": "https://music.apple.com/us/artist/jimmy-eat-world/3446973",
+      },
+      "duration": 165,
+      "title": "The Middle",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/the-middle/1450030107?i=1450030115",
+    },
+    Object {
+      "artist": Object {
+        "name": "Luke Wild",
+        "url": "https://music.apple.com/us/artist/luke-wild/1400258055",
+      },
+      "duration": 104,
+      "title": "New Miss America",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/new-miss-america/1568627907?i=1568627913",
+    },
+    Object {
+      "artist": Object {
+        "name": "The Linda Lindas",
+        "url": "https://music.apple.com/us/artist/the-linda-lindas/1525944355",
+      },
+      "duration": 155,
+      "title": "Oh!",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/oh/1573740650?i=1573740651",
+    },
+    Object {
+      "artist": Object {
+        "name": "Arctic Monkeys",
+        "url": "https://music.apple.com/us/artist/arctic-monkeys/62820413",
+      },
+      "duration": 176,
+      "title": "I Bet You Look Good On the Dancefloor",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/i-bet-you-look-good-on-the-dancefloor/308734607?i=308734614",
+    },
+    Object {
+      "artist": Object {
+        "name": "twenty one pilots",
+        "url": "https://music.apple.com/us/artist/twenty-one-pilots/349736311",
+      },
+      "duration": 172,
+      "title": "Saturday",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/saturday/1561836997?i=1561837010",
+    },
+    Object {
+      "artist": Object {
+        "name": "Briston Maroney",
+        "url": "https://music.apple.com/us/artist/briston-maroney/418604503",
+      },
+      "duration": 190,
+      "title": "Bottle Rocket",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/bottle-rocket/1550391404?i=1550391410",
+    },
+    Object {
+      "artist": Object {
+        "name": "The White Stripes",
+        "url": "https://music.apple.com/us/artist/the-white-stripes/2456318",
+      },
+      "duration": 110,
+      "title": "Fell In Love With a Girl",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/fell-in-love-with-a-girl/1573082595?i=1573082609",
+    },
+    Object {
+      "artist": Object {
+        "name": "jxdn",
+        "url": "https://music.apple.com/us/artist/jxdn/1513237359",
+      },
+      "duration": 158,
+      "title": "WANNA BE (feat. Machine Gun Kelly)",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/wanna-be-feat-machine-gun-kelly/1570543863?i=1570544127",
+    },
+    Object {
+      "artist": Object {
+        "name": "Volbeat",
+        "url": "https://music.apple.com/us/artist/volbeat/157709052",
+      },
+      "duration": 140,
+      "title": "Wait A Minute My Girl",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/wait-a-minute-my-girl/1568277127?i=1568277150",
+    },
+    Object {
+      "artist": Object {
+        "name": "LINKIN PARK",
+        "url": "https://music.apple.com/us/artist/linkin-park/148662",
+      },
+      "duration": 164,
+      "title": "Bleed It Out",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/bleed-it-out/590427297?i=590427308",
+    },
+    Object {
+      "artist": Object {
+        "name": "WILLOW",
+        "url": "https://music.apple.com/us/artist/willow/400531893",
+      },
+      "duration": 168,
+      "title": "t r a n s p a r e n t s o u l (feat. Travis Barker)",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/t-r-a-n-s-p-a-r-e-n-t-s-o-u-l-feat-travis-barker/1563324863?i=1563325009",
+    },
+    Object {
+      "artist": Object {
+        "name": "Lit",
+        "url": "https://music.apple.com/us/artist/lit/213555",
+      },
+      "duration": 169,
+      "title": "My Own Worst Enemy",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/my-own-worst-enemy/258611802?i=258611995",
+    },
+    Object {
+      "artist": Object {
+        "name": "Bastille",
+        "url": "https://music.apple.com/us/artist/bastille/420203509",
+      },
+      "duration": 177,
+      "title": "Distorted Light Beam",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/distorted-light-beam/1572619577?i=1572619866",
+    },
+    Object {
+      "artist": Object {
+        "name": "The All-American Rejects",
+        "url": "https://music.apple.com/us/artist/the-all-american-rejects/3447642",
+      },
+      "duration": 238,
+      "title": "Move Along",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/move-along/1444092638?i=1444093106",
+    },
+    Object {
+      "artist": Object {
+        "name": "Bad Suns",
+        "url": "https://music.apple.com/us/artist/bad-suns/623897863",
+      },
+      "duration": 231,
+      "title": "Heaven Is a Place in My Head",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/heaven-is-a-place-in-my-head/1566312784?i=1566312785",
+    },
+    Object {
+      "artist": Object {
+        "name": "311",
+        "url": "https://music.apple.com/us/artist/311/1504658",
+      },
+      "duration": 172,
+      "title": "Down",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/down/254347615?i=254347643",
+    },
+    Object {
+      "artist": Object {
+        "name": "Keir",
+        "url": "https://music.apple.com/us/artist/keir/1474642640",
+      },
+      "duration": 196,
+      "title": "Boys Will Be Girls",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/boys-will-be-girls/1569745991?i=1569745997",
+    },
+    Object {
+      "artist": Object {
+        "name": "Eve 6",
+        "url": "https://music.apple.com/us/artist/eve-6/535530",
+      },
+      "duration": 148,
+      "title": "angel of the supermarket",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/angel-of-the-supermarket/1548548049?i=1548548388",
+    },
+    Object {
+      "artist": Object {
+        "name": "Hippo Campus",
+        "url": "https://music.apple.com/us/artist/hippo-campus/920694238",
+      },
+      "duration": 178,
+      "title": "Bad Dream Baby",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/bad-dream-baby/1568831286?i=1568831299",
+    },
+    Object {
+      "artist": Object {
+        "name": "The Strokes",
+        "url": "https://music.apple.com/us/artist/the-strokes/560289",
+      },
+      "duration": 193,
+      "title": "Last Nite",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/last-nite/266376953?i=266377010",
+    },
+    Object {
+      "artist": Object {
+        "name": "The Foxies",
+        "url": "https://music.apple.com/us/artist/the-foxies/1071004711",
+      },
+      "duration": 181,
+      "title": "Summer Never Dies",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/summer-never-dies/1571175669?i=1571175671",
+    },
+    Object {
+      "artist": Object {
+        "name": "Cage the Elephant",
+        "url": "https://music.apple.com/us/artist/cage-the-elephant/267957933",
+      },
+      "duration": 173,
+      "title": "Mess Around",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/mess-around/1051876257?i=1051876263",
+    },
+    Object {
+      "artist": Object {
+        "name": "The Vaccines",
+        "url": "https://music.apple.com/us/artist/the-vaccines/5184234",
+      },
+      "duration": 213,
+      "title": "Back In Love City",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/back-in-love-city/1562719936?i=1562719940",
+    },
+    Object {
+      "artist": Object {
+        "name": "Elastica",
+        "url": "https://music.apple.com/us/artist/elastica/146496",
+      },
+      "duration": 140,
+      "title": "Connection",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/connection/1443993070?i=1443993482",
+    },
+    Object {
+      "artist": Object {
+        "name": "Gang of Youths",
+        "url": "https://music.apple.com/us/artist/gang-of-youths/687934696",
+      },
+      "duration": 238,
+      "title": "the angel of 8th ave.",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/the-angel-of-8th-ave/1569616729?i=1569616732",
+    },
+    Object {
+      "artist": Object {
+        "name": "blink-182",
+        "url": "https://music.apple.com/us/artist/blink-182/116851",
+      },
+      "duration": 148,
+      "title": "What's My Age Again?",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/whats-my-age-again/1440839912?i=1440840493",
+    },
+    Object {
+      "artist": Object {
+        "name": "Coldplay",
+        "url": "https://music.apple.com/us/artist/coldplay/471744",
+      },
+      "duration": 211,
+      "title": "Higher Power",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/higher-power/1564098693?i=1564099110",
+    },
+    Object {
+      "artist": Object {
+        "name": "Fall Out Boy",
+        "url": "https://music.apple.com/us/artist/fall-out-boy/28673423",
+      },
+      "duration": 230,
+      "title": "Sugar, We're Goin' Down",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/sugar-were-goin-down/1440559926?i=1440560144",
+    },
+    Object {
+      "artist": Object {
+        "name": "Tones And I",
+        "url": "https://music.apple.com/us/artist/tones-and-i/1488123516",
+      },
+      "duration": 185,
+      "title": "Cloudy Day",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/cloudy-day/1570898490?i=1570898658",
+    },
+    Object {
+      "artist": Object {
+        "name": "The Killers",
+        "url": "https://music.apple.com/us/artist/the-killers/6483093",
+      },
+      "duration": 222,
+      "title": "Mr. Brightside",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/mr-brightside/1526194184?i=1526194192",
+    },
+    Object {
+      "artist": Object {
+        "name": "Bleachers",
+        "url": "https://music.apple.com/us/artist/bleachers/824434533",
+      },
+      "duration": 199,
+      "title": "Stop Making This Hurt",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/stop-making-this-hurt/1567285157?i=1567285165",
+    },
+    Object {
+      "artist": Object {
+        "name": "The Mighty Mighty Bosstones",
+        "url": "https://music.apple.com/us/artist/the-mighty-mighty-bosstones/118161",
+      },
+      "duration": 194,
+      "title": "The Impression That I Get",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/the-impression-that-i-get/1440920765?i=1440921082",
+    },
+    Object {
+      "artist": Object {
+        "name": "Turnstile",
+        "url": "https://music.apple.com/us/artist/turnstile/4472006",
+      },
+      "duration": 155,
+      "title": "MYSTERY",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/mystery/1566166548?i=1566166549",
+    },
+    Object {
+      "artist": Object {
+        "name": "The Vines",
+        "url": "https://music.apple.com/us/artist/the-vines/569037",
+      },
+      "duration": 126,
+      "title": "Get Free",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/get-free/724725293?i=724725574",
+    },
+    Object {
+      "artist": Object {
+        "name": "Mike Shinoda",
+        "url": "https://music.apple.com/us/artist/mike-shinoda/41334108",
+      },
+      "duration": 212,
+      "title": "Happy Endings (feat. iann dior and UPSAHL)",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/happy-endings-feat-iann-dior-and-upsahl/1553564909?i=1553565166",
+    },
+    Object {
+      "artist": Object {
+        "name": "Jet",
+        "url": "https://music.apple.com/us/artist/jet/2502435",
+      },
+      "duration": 213,
+      "title": "Are You Gonna Be My Girl",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/are-you-gonna-be-my-girl/2859605?i=2859540",
+    },
+    Object {
+      "artist": Object {
+        "name": "Jelani Aryeh",
+        "url": "https://music.apple.com/us/artist/jelani-aryeh/1234730350",
+      },
+      "duration": 206,
+      "title": "From These Heights",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/from-these-heights/1563866833?i=1563866841",
+    },
+    Object {
+      "artist": Object {
+        "name": "The Presidents of the United States of America",
+        "url": "https://music.apple.com/us/artist/the-presidents-of-the-united-states-of-america/486065",
+      },
+      "duration": 134,
+      "title": "Lump",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/lump/28397418?i=28397370",
+    },
+    Object {
+      "artist": Object {
+        "name": "Modest Mouse",
+        "url": "https://music.apple.com/us/artist/modest-mouse/467112",
+      },
+      "duration": 232,
+      "title": "We Are Between",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/we-are-between/1565510000?i=1565510002",
+    },
+    Object {
+      "artist": Object {
+        "name": "Kings of Leon",
+        "url": "https://music.apple.com/us/artist/kings-of-leon/1883403",
+      },
+      "duration": 203,
+      "title": "Sex On Fire",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/sex-on-fire/290302885?i=290303003",
+    },
+    Object {
+      "artist": Object {
+        "name": "Lord Huron",
+        "url": "https://music.apple.com/us/artist/lord-huron/393068687",
+      },
+      "duration": 177,
+      "title": "Not Dead Yet",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/not-dead-yet/1557584746?i=1557585306",
+    },
+    Object {
+      "artist": Object {
+        "name": "Nirvana",
+        "url": "https://music.apple.com/us/artist/nirvana/112018",
+      },
+      "duration": 257,
+      "title": "Lithium",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/lithium/1440783617?i=1440783764",
+    },
+    Object {
+      "artist": Object {
+        "name": "Green Day",
+        "url": "https://music.apple.com/us/artist/green-day/954266",
+      },
+      "duration": 195,
+      "title": "Pollyanna",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/pollyanna/1567446475?i=1567446476",
+    },
+    Object {
+      "artist": Object {
+        "name": "Rage Against the Machine",
+        "url": "https://music.apple.com/us/artist/rage-against-the-machine/899409",
+      },
+      "duration": 205,
+      "title": "Sleep Now In the Fire",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/sleep-now-in-the-fire/192816635?i=192816780",
+    },
+    Object {
+      "artist": Object {
+        "name": "YUNGBLUD",
+        "url": "https://music.apple.com/us/artist/yungblud/213048599",
+      },
+      "duration": 191,
+      "title": "acting like that (feat. Machine Gun Kelly)",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/acting-like-that-feat-machine-gun-kelly/1541250330?i=1541250992",
+    },
+    Object {
+      "artist": Object {
+        "name": "Veruca Salt",
+        "url": "https://music.apple.com/us/artist/veruca-salt/112440",
+      },
+      "duration": 198,
+      "title": "Volcano Girls",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/volcano-girls/1440908609?i=1440908615",
+    },
+    Object {
+      "artist": Object {
+        "name": "KennyHooplaTravis Barker",
+        "url": "https://music.apple.com/us/artist/kennyhoopla/1272741478",
+      },
+      "duration": 153,
+      "title": "hollywood sucks//",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/hollywood-sucks/1565613503?i=1565613508",
+    },
+    Object {
+      "artist": Object {
+        "name": "Sum 41",
+        "url": "https://music.apple.com/us/artist/sum-41/249591",
+      },
+      "duration": 178,
+      "title": "Fat Lip",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/fat-lip/1440920798?i=1440921141",
+    },
+    Object {
+      "artist": Object {
+        "name": "The Glorious Sons",
+        "url": "https://music.apple.com/us/artist/the-glorious-sons/738523151",
+      },
+      "duration": 160,
+      "title": "Daylight",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/daylight/1564106170?i=1564106176",
+    },
+    Object {
+      "artist": Object {
+        "name": "Foals",
+        "url": "https://music.apple.com/us/artist/foals/192738057",
+      },
+      "duration": 238,
+      "title": "My Number",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/my-number/1579090905?i=1579091347",
+    },
+    Object {
+      "artist": Object {
+        "name": "Machine Gun Kelly",
+        "url": "https://music.apple.com/us/artist/machine-gun-kelly/465954501",
+      },
+      "duration": 188,
+      "title": "love race (feat. Kellin Quinn)",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/love-race-feat-kellin-quinn/1564176382?i=1564176728",
+    },
+    Object {
+      "artist": Object {
+        "name": "Ramones",
+        "url": "https://music.apple.com/us/artist/ramones/60715",
+      },
+      "duration": 149,
+      "title": "I Wanna Be Sedated",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/i-wanna-be-sedated/77817363?i=77817249",
+    },
+    Object {
+      "artist": Object {
+        "name": "The Maine",
+        "url": "https://music.apple.com/us/artist/the-maine/268579357",
+      },
+      "duration": 178,
+      "title": "Sticky",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/sticky/1558238698?i=1558238826",
+    },
+    Object {
+      "artist": Object {
+        "name": "Gorillaz",
+        "url": "https://music.apple.com/us/artist/gorillaz/567072",
+      },
+      "duration": 221,
+      "title": "Feel Good Inc.",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/feel-good-inc/850571319?i=850571371",
+    },
+    Object {
+      "artist": Object {
+        "name": "The Aces",
+        "url": "https://music.apple.com/us/artist/the-aces/1238525085",
+      },
+      "duration": 166,
+      "title": "Don't Freak",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/dont-freak/1561755919?i=1561755920",
+    },
+    Object {
+      "artist": Object {
+        "name": "Modest Mouse",
+        "url": "https://music.apple.com/us/artist/modest-mouse/467112",
+      },
+      "duration": 208,
+      "title": "Float On",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/float-on/201257412?i=201257515",
+    },
+    Object {
+      "artist": Object {
+        "name": "Wolf Alice",
+        "url": "https://music.apple.com/us/artist/wolf-alice/589384117",
+      },
+      "duration": 196,
+      "title": "Smile",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/smile/1554144723?i=1554144907",
+    },
+    Object {
+      "artist": Object {
+        "name": "Daft Punk",
+        "url": "https://music.apple.com/us/artist/daft-punk/5468295",
+      },
+      "duration": 369,
+      "title": "Get Lucky (feat. Pharrell Williams & Nile Rodgers)",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/get-lucky-feat-pharrell-williams-nile-rodgers/617154241?i=617154366",
+    },
+    Object {
+      "artist": Object {
+        "name": "twenty one pilots",
+        "url": "https://music.apple.com/us/artist/twenty-one-pilots/349736311",
+      },
+      "duration": 175,
+      "title": "Shy Away",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/shy-away/1561836997?i=1561837008",
+    },
+    Object {
+      "artist": Object {
+        "name": "Beck",
+        "url": "https://music.apple.com/us/artist/beck/312095",
+      },
+      "duration": 194,
+      "title": "Devils Haircut",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/devils-haircut/1510827144?i=1510827146",
+    },
+    Object {
+      "artist": Object {
+        "name": "The Revelries",
+        "url": "https://music.apple.com/us/artist/the-revelries/1364245983",
+      },
+      "duration": 164,
+      "title": "Cliché Love",
+      "type": "song",
+      "url": "https://music.apple.com/us/album/clich%C3%A9-love/1562890480?i=1562890482",
+    },
+  ],
+  "type": "playlist",
+}
+`;
+
+exports[`song 1`] = `
+Object {
+  "artist": Object {
+    "name": "Sody",
+    "url": "https://music.apple.com/nz/artist/sody/271348279",
+  },
+  "duration": 189,
+  "title": "butterfly",
+  "type": "song",
+  "url": "https://music.apple.com/nz/album/butterfly/1541902791?i=1541903021?i=1541903021",
+}
+`;

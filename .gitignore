@@ -2,4 +2,3 @@ package-lock.json
 
 node_modules
 build
-tests/__snapshots__
