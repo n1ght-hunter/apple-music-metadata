@@ -2,12 +2,7 @@ src/
 tests/
 tslint.json
 tsconfig.json
-.idea/
-.eslintrc.yaml
+postbuild.js
 .github
 .eslintrc
 .eslintignore
-*.tgz
-docs
-jsdoc.json
-dmp-ts.iml

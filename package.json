@@ -30,12 +30,14 @@
     "README.md",
     "package.json"
   ],
+  "type": "module",
   "main": "./build/cjs/index.js",
   "module": "./build/esm/index.js",
   "scripts": {
     "build": "npm run build:esm && npm run build:cjs",
     "build:cjs": "tsc --module CommonJs --outDir build/cjs",
     "build:esm": "tsc",
+    "postbuild": "node postbuild.js",
     "start": "ts-node ./src/index.ts",
     "test": "jest"
   },
