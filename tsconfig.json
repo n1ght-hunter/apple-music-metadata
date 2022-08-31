@@ -1,24 +1,16 @@
 {
-  "compilerOptions": {
-    "target": "ESNEXT",
-    "module": "ESNEXT",
-    "declaration": true,
-    "rootDir": "src",
-    "outDir": "build/esm",
-    "strict": true,
-    "strictNullChecks": true,
-    "noUncheckedIndexedAccess": true,
-    "esModuleInterop": true,
-    "pretty": true,
-    "skipLibCheck": false,
-    "resolveJsonModule": true,
-    "noImplicitAny": true,
-    "sourceMap": false,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "importHelpers": true,
-    "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "Node"
-  },
-  "exclude": ["node_modules", "build", "tests"]
+    "compilerOptions": {
+        "lib": ["es2021"],
+        "module": "commonjs",
+        "target": "esNext",
+        "strict": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "sourceMap": true,
+        "forceConsistentCasingInFileNames": true,
+        "outDir": "dist"
+    },
+    "include": ["src", "tests"],
+    "exclude": ["node_modules"]
 }
+
